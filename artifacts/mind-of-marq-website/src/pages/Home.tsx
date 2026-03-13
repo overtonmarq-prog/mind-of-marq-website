@@ -217,6 +217,73 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ─── STORYWORLD OVERVIEW ─────────────────────────────────────── */}
+        <section className="py-24 bg-foreground text-white">
+          <div className="container mx-auto px-4 md:px-6 text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight"
+            >
+              The Mind of Marq Storyworld
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-12 leading-relaxed"
+            >
+              Stories that begin with books and grow into learning experiences, classrooms, and future stage and screen adventures.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex flex-wrap justify-center gap-3 mb-16"
+            >
+              {["Books", "Learning", "Stage & Screen"].map((label) => (
+                <span
+                  key={label}
+                  className="px-6 py-2.5 rounded-full border border-white/30 text-white/90 text-sm font-semibold tracking-wide hover:bg-white/10 transition-colors cursor-default"
+                >
+                  {label}
+                </span>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="inline-flex flex-wrap justify-center items-center gap-0"
+            >
+              {["Books", "Classroom", "Theater", "Animation", "Film"].map((step, i, arr) => (
+                <div key={step} className="flex items-center">
+                  <div className="flex flex-col items-center px-4 py-3">
+                    <span className="text-xs font-bold uppercase tracking-widest text-primary mb-1">
+                      {`0${i + 1}`}
+                    </span>
+                    <span className="font-serif font-bold text-white text-lg md:text-xl">
+                      {step}
+                    </span>
+                  </div>
+                  {i < arr.length - 1 && (
+                    <span className="text-primary text-2xl font-light mx-1 select-none">→</span>
+                  )}
+                </div>
+              ))}
+            </motion.div>
+            <p className="text-xs uppercase tracking-widest text-white/40 mt-4">Expansion Path</p>
+          </div>
+        </section>
+
         {/* ─── STORYWORLD ──────────────────────────────────────────────── */}
         <section id="storyworld" className="py-24 bg-secondary/50 relative">
           <div className="container mx-auto px-4 md:px-6">
