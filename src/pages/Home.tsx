@@ -370,6 +370,90 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ─── EDUCATOR TOOLKIT ────────────────────────────────────────── */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-14"
+            >
+              <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">
+                For Educators
+              </span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-5 leading-tight">
+                Educator Toolkit
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Ready-to-use materials that turn stories into classroom activities.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {[
+                {
+                  num: "01",
+                  title: "Lesson Starters",
+                  desc: "Short discussion prompts tied to each story's STEM idea and SEL theme.",
+                  icon: <BookOpen className="w-7 h-7 text-primary" />,
+                },
+                {
+                  num: "02",
+                  title: "Activity Sheets",
+                  desc: "Printable pages for reflection, science observation, drawing, and writing.",
+                  icon: <GraduationCap className="w-7 h-7 text-primary" />,
+                },
+                {
+                  num: "03",
+                  title: "Classroom Connections",
+                  desc: "Ideas for linking the story to science units, writing exercises, or group discussion.",
+                  icon: <CheckCircle2 className="w-7 h-7 text-primary" />,
+                },
+              ].map((card, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 28 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="bg-secondary/40 rounded-2xl p-8 border border-border"
+                  style={{ boxShadow: "var(--shadow-subtle)" }}
+                >
+                  <div className="flex items-center gap-3 mb-5">
+                    {card.icon}
+                    <span className="text-xs font-bold tracking-widest text-primary uppercase">{card.num}</span>
+                  </div>
+                  <h3 className="text-xl font-serif font-bold mb-3">{card.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{card.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-center"
+            >
+              <a
+                href="/Educator_Starter_Kit_MOM_Kids.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded-full transition-colors text-base"
+              >
+                <BookOpen className="w-5 h-5" />
+                Download Sample Classroom Kit
+              </a>
+              <p className="text-sm text-muted-foreground mt-4 max-w-xl mx-auto leading-relaxed">
+                Teachers can explore how Mind of Marq stories support STEM curiosity and social emotional learning in real classrooms.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* ─── BOOKS ───────────────────────────────────────────────────── */}
         <section id="books" className="py-24 bg-background">
           <div className="container mx-auto px-4 md:px-6">
