@@ -1,0 +1,406 @@
+Build a full Netlify-ready website project for my brand using React, Vite, TypeScript, and Tailwind CSS.
+
+Project name:
+mind-of-marq-website
+
+Brand structure:
+The Mind of Marq is the main website.
+Mind of Marq Publishing is the publishing imprint.
+M.O.M. Kids Storyworld is the featured educational division.
+
+Goal:
+Create a polished, responsive, professional website for The Mind of Marq that can be deployed directly to Netlify and later connected to my GoDaddy domain.
+
+Requirements:
+1. Use React + Vite + TypeScript
+2. Use Tailwind CSS
+3. Make the project production ready
+4. Include a working Netlify configuration
+5. Make the contact form compatible with Netlify Forms
+6. Build a single-page scrolling site with section navigation
+7. Keep the style premium literary, educational modern, and partnership ready
+8. Use semantic HTML and responsive layout
+9. No placeholder lorem ipsum
+10. Include all content provided below as real site copy
+
+Pages or sections required:
+1. Home
+2. Publishing
+3. Storyworld
+4. Books
+5. Educators
+6. Libraries
+7. Partnerships
+8. About
+9. Contact
+
+Navigation anchors:
+#home
+#publishing
+#storyworld
+#books
+#educators
+#libraries
+#partnerships
+#about
+#contact
+
+Design direction:
+1. clean and modern
+2. neutral academic palette
+3. deep teal accent
+4. elegant typography
+5. card based layout
+6. mobile responsive
+7. soft shadows
+8. rounded corners
+9. high readability
+10. should feel like a real publishing house and educational media studio
+
+Use these core colors:
+1. stone backgrounds
+2. slate text
+3. teal accent for buttons and highlights
+
+Technical requirements:
+1. include package.json
+2. include vite.config.ts
+3. include tsconfig.json
+4. include tsconfig.node.json
+5. include tailwind.config.js
+6. include postcss.config.js
+7. include netlify.toml
+8. include index.html
+9. include src/main.tsx
+10. include src/index.css
+11. include src/App.tsx
+12. include src/vite-env.d.ts
+
+Netlify requirements:
+1. build command should be npm run build
+2. publish directory should be dist
+3. include redirect rule for SPA
+4. contact form must use:
+   - name=\"contact\"
+   - method=\"POST\"
+   - data-netlify=\"true\"
+   - hidden input form-name
+
+Site copy and structure:
+
+Home hero:
+Headline:
+The Mind of Marq
+
+Subheadline:
+Home of Mind of Marq Publishing
+
+Body:
+A connected home for books, storyworlds, educational experiences, and original creative properties. Explore Mind of Marq Publishing and discover M.O.M. Kids Storyworld, where STEM + SEL learning grows through story.
+
+Hero buttons:
+1. Enter Storyworld
+2. Explore Publishing
+3. Contact
+
+Hero highlight pills:
+1. Books
+2. Education
+3. Stage
+4. Film
+
+Brand preview cards:
+1. Website, The Mind of Marq
+2. Publishing Imprint, Mind of Marq Publishing
+3. Featured Division, M.O.M. Kids Storyworld, STEM + SEL Learning Through Story
+
+Learning tiers:
+1. Early Discovery, Ages 3–5, Coloring based introductions that build motor skills, creativity, and early character familiarity.
+2. Guided Reading, Ages 6–8, Teacher or parent guided stories that connect literacy, science curiosity, and emotional growth.
+3. Independent Reflection, Ages 9–12, Stronger reading experiences that support reflection, identity, and deeper classroom conversation.
+
+Publishing section:
+Headline:
+One brand, multiple worlds
+
+Body:
+Mind of Marq Publishing is designed to house children’s books, educational platforms, story driven intellectual property, and future media expansions under one clear parent brand.
+
+Division cards:
+1. Mind of Marq Publishing, The publishing imprint for books, story properties, educational platforms, and future long form creative works.
+2. M.O.M. Kids Storyworld, A STEM + SEL learning platform built around character driven stories, educator value, and library friendly programming.
+3. Stories, Stage, and Screen, A growing slate of original properties for books, storyworld expansion, and future stage, film, and television development.
+
+Storyworld section:
+Headline:
+M.O.M. Kids Storyworld
+
+Subheadline:
+STEM + SEL Learning Through Story
+
+Body:
+An educational storytelling system that combines science exploration, emotional intelligence, and character growth through memorable stories built for multiple learning tiers.
+
+Why it works bullets:
+1. Story first learning that supports STEM curiosity and SEL growth.
+2. Built for teachers, librarians, families, and students.
+3. Expandable into downloadable resources and interactive classroom tools.
+4. Designed as a long term platform, not a one book landing page.
+
+Featured books:
+1. Percy’s First Resolution
+Meta:
+Ages 6–8 · Guided Reading
+Blurb:
+A young penguin learns that goals take patience, practice, and persistence.
+STEM:
+Problem solving, Observation, Experimentation
+SEL:
+Goal setting, Resilience, Persistence
+
+2. The Brief but Spectacular Lives of Caterpillars
+Meta:
+Ages 6–11 · Read Aloud to Independent Reading
+Blurb:
+A story of curiosity, identity, transformation, and the wonder of nature.
+STEM:
+Life cycles, Biology, Metamorphosis
+SEL:
+Curiosity, Identity, Friendship
+
+3. Confessions of a Teenaged Martial Artist
+Meta:
+Ages 9–12 · Bridge Book
+Blurb:
+A coming-of-age story about discipline, identity, and discovering strength in unexpected places. When Xavier Williams is placed in a ballet class he never wanted, he slowly discovers that the training is making him stronger, faster, and more balanced.
+STEM:
+Biomechanics, Movement science, Physical training
+SEL:
+Confidence, Emotional awareness, Self acceptance
+
+Catalog structure cards:
+1. Early Discovery, Ages 3–5, Percy Series Coloring Book, The Caterpillar Adventure Coloring Book
+2. Guided Reading, Ages 6–8, Percy’s First Resolution, The Brief but Spectacular Lives of Caterpillars Part 1, The Brief but Spectacular Lives of Caterpillars Part 2
+3. Independent Reflection, Ages 9–12, Percy’s First New Year’s Resolution, The Brief but Spectacular Lives of Caterpillars, Confessions of a Teenaged Martial Artist
+
+Educators section:
+Headline:
+Teach through story
+
+Body:
+Connect books to STEM themes, SEL discussion prompts, guided reflection, and future classroom extensions.
+
+Educator bullets:
+1. discussion ready story themes
+2. STEM and SEL alignment potential
+3. reflection prompts and classroom extensions
+4. age band friendly catalog design
+
+Educator positioning:
+Built for classroom value
+
+Body:
+M.O.M. Kids Storyworld titles are designed to help students engage with science ideas, emotional development, and character based learning in ways that feel natural, memorable, and discussion ready.
+
+Libraries section:
+Headline:
+Program around discovery
+
+Body:
+Build family literacy programs, science events, and youth discussions around curiosity, growth, identity, and transformation.
+
+Library bullets:
+1. family literacy programming potential
+2. science and nature themed events
+3. discussion based youth engagement
+4. multi age discovery pathways
+
+Library positioning:
+Stories that support programming
+
+Body:
+These books are designed to live beyond the shelf. They support discovery based events, themed reading sessions, family participation, and meaningful youth engagement.
+
+Partnerships section:
+Headline:
+Building the Mind of Marq Storyworld
+
+Body paragraphs:
+The Mind of Marq is an independent storytelling studio developing original intellectual property across books, education, stage, and film.
+
+Our mission is simple. Create stories that inspire courage, curiosity, and transformation in young audiences while delivering powerful entertainment for families worldwide.
+
+The Mind of Marq ecosystem is designed to grow through strategic partnerships with educators, creative studios, and forward thinking investors who believe storytelling can shape the next generation.
+
+Partnership list:
+1. schools and educational institutions
+2. youth theater organizations
+3. animation studios and filmmakers
+4. streaming platforms and production companies
+5. brand and educational media partners
+6. mission aligned investors
+
+Educational theater section:
+Headline:
+Student Productions, Spring and Winter
+
+Body:
+Mind of Marq Kids titles are being developed for educational stage adaptations designed for school theater programs. These productions give students the opportunity to perform meaningful stories while reinforcing themes of resilience, discipline, growth, and emotional awareness.
+
+Seasonal productions:
+1. Spring theater programs
+2. Winter holiday theater seasons
+
+Adaptations under development:
+1. Percy’s First New Year’s Resolution, a story about perseverance, goals, and the courage to try again.
+2. The Brief but Spectacular Lives of Caterpillars, a whimsical exploration of transformation, friendship, and the mystery of growing up.
+3. Confessions of a Teenaged Martial Artist, a coming of age story about discipline, identity, and the unexpected power of ballet in martial arts training.
+
+Educational theater benefits:
+1. combine literacy with performance
+2. reinforce STEM and Social Emotional Learning
+3. build student confidence through storytelling
+4. engage families through community theater
+
+Film and animation development:
+Headline:
+Mind of Marq Kids Film Division
+
+Body:
+The Mind of Marq Kids Film Division is exploring partnerships to develop animated films and visual storytelling projects based on the Mind of Marq Kids library.
+
+These projects combine heart, humor, and meaningful life lessons with cinematic storytelling designed for global family audiences.
+
+We welcome conversations with:
+1. animation studios
+2. independent film producers
+3. streaming platforms
+4. educational media companies
+5. co production partners
+6. investors in family entertainment
+
+Goal statement:
+Our goal is to create films that entertain children while reinforcing courage, curiosity, and emotional growth.
+
+Film slate:
+1. Percy’s First New Year’s Resolution
+Format:
+Animated Family Feature
+Description:
+A determined young penguin makes a bold New Year’s resolution and discovers that growth requires patience, courage, and persistence.
+Tone:
+heartfelt, humorous, inspirational
+Themes:
+perseverance, goal setting, resilience
+Audience:
+Family audiences and children ages 6–11.
+
+2. The Brief but Spectacular Lives of Caterpillars
+Format:
+Animated Fantasy Adventure
+Description:
+Young caterpillars discover the mystery of transformation while navigating friendship, curiosity, and the unknown journey ahead.
+Tone:
+whimsical, magical, philosophical
+Themes:
+transformation, identity, wonder
+Audience:
+Family audiences and children ages 6–12.
+
+3. Confessions of a Teenaged Martial Artist
+Format:
+Coming of Age Feature
+Description:
+Confessions of a Teenaged Martial Artist is a coming-of-age story about discipline, identity, and discovering strength in unexpected places. Xavier Williams dreams of becoming a martial artist, but through a twist of circumstance he is placed in a ballet class he never wanted. What begins as resistance slowly becomes a revelation as he discovers that ballet is making him stronger, faster, and more balanced. As Xavier trains his body and mind, he begins to understand the lessons his father tried to teach him before his passing. The story blends martial arts philosophy, grief, perseverance, and the search for identity.
+Tone:
+inspiring, humorous, emotional
+Themes:
+identity, discipline, self discovery
+Audience:
+Young audiences and family viewers.
+
+Storyworld strategy:
+Mind of Marq Kids is building a connected storytelling universe. Every story begins as a high quality illustrated book designed to ignite curiosity and emotional awareness in young readers.
+
+From there the strongest stories expand into multiple experiences:
+1. classroom resources
+2. STEM and SEL educational tools
+3. student theater productions
+4. animated short films
+5. animated feature films
+6. educational merchandise and media
+
+Strategic opportunities:
+Education:
+1. school curriculum partnerships
+2. classroom storytelling programs
+3. SEL and STEM educational initiatives
+
+Youth Theater:
+1. licensed student productions
+2. youth theater festivals
+3. school arts partnerships
+
+Film and Media:
+1. animation development
+2. feature film production
+3. streaming partnerships
+
+Investment:
+1. franchise development
+2. educational media expansion
+3. global distribution partnerships
+
+Press summary:
+Mind of Marq Kids is an educational storytelling brand expanding from books into classrooms, stage productions, and film development.
+
+Through stories such as Percy’s First New Year’s Resolution, The Brief but Spectacular Lives of Caterpillars, and Confessions of a Teenaged Martial Artist, the brand blends imagination, emotional intelligence, and educational storytelling.
+
+The long term vision is to build a global story universe where books spark curiosity, classrooms ignite learning, and stories grow into cinematic experiences that inspire audiences around the world.
+
+About section:
+Headline:
+About The Mind of Marq
+
+Body:
+The Mind of Marq is a creative platform built to develop original stories, educational experiences, and long term story universes. Through Mind of Marq Publishing, projects expand into books, learning tools, and future media properties while staying grounded in thoughtful storytelling and lasting impact.
+
+Second paragraph:
+The goal is simple, build memorable worlds, create meaningful learning experiences, and present story driven properties with the kind of structure that can grow across categories, audiences, and formats.
+
+Contact section:
+Headline:
+Get in Touch
+
+Body:
+For educator partnerships, library programming, media inquiries, or publishing questions, send a message using the form or email marq@mindofmarq.com.
+
+Direct email:
+marq@mindofmarq.com
+
+Footer:
+The Mind of Marq
+Home of Mind of Marq Publishing and M.O.M. Kids Storyworld.
+
+Include in footer explore links:
+Publishing
+Storyworld
+Books
+Educators
+Libraries
+Partnerships
+
+Final output requirements:
+1. generate all files
+2. organize the code cleanly
+3. make sure the app runs without errors
+4. make sure npm install, npm run dev, and npm run build all work
+5. do not give me partial snippets
+6. give me the complete project
+7. keep content easy to edit later
+
+After building, tell me exactly:
+1. what files were created
+2. how to run locally
+3. how to deploy to Netlify
+4. what build command and publish directory to use

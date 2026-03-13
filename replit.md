@@ -48,6 +48,21 @@ Every package extends `tsconfig.base.json` which sets `composite: true`. The roo
 - `pnpm run build` — runs `typecheck` first, then recursively runs `build` in all packages that define it
 - `pnpm run typecheck` — runs `tsc --build --emitDeclarationOnly` using project references
 
+## Artifacts
+
+### `artifacts/mind-of-marq-website` (`@workspace/mind-of-marq-website`)
+
+The Mind of Marq brand website — a polished, single-page scrolling React + Vite + TypeScript + Tailwind CSS site. Covers 9 sections: Home, Publishing, Storyworld, Books, Educators, Libraries, Partnerships, About, Contact.
+
+- **Design**: Premium literary aesthetic, deep teal accents, stone/slate palette, card-based layouts, soft shadows, elegant serif typography
+- **Images**: AI-generated hero bg, 3 book covers, about-library image in `public/images/`
+- **Contact form**: Netlify Forms compatible (`data-netlify="true"`, hidden `form-name` input)
+- **Netlify config**: `netlify.toml` with `npm run build`, publish `dist`, SPA redirect rule
+- **Tech**: React + Vite, Tailwind CSS, framer-motion, shadcn/ui components, wouter routing
+- **Preview**: Served at `/` (previewPath: `/`)
+- Dev: `pnpm --filter @workspace/mind-of-marq-website run dev`
+- Build: `pnpm --filter @workspace/mind-of-marq-website run build`
+
 ## Packages
 
 ### `artifacts/api-server` (`@workspace/api-server`)
