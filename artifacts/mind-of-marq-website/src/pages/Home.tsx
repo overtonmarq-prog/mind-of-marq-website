@@ -55,7 +55,7 @@ export default function Home() {
 
       <main>
         {/* ─── HOME / HERO ──────────────────────────────────────────── */}
-        <section id="home" className="relative min-h-[92vh] flex items-center pt-20 overflow-hidden">
+        <section id="home" className="relative min-h-[92vh] flex flex-col pt-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
@@ -65,7 +65,8 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/75 to-background" />
           </div>
 
-          <div className="container mx-auto px-4 md:px-6 relative z-10">
+          {/* Main hero content — grows to fill available height, buttons stay in flow */}
+          <div className="container mx-auto px-4 md:px-6 relative z-10 flex-1 flex items-center justify-center py-16">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -145,8 +146,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Brand preview cards */}
-          <div className="absolute bottom-0 left-0 right-0 z-10">
+          {/* Brand preview cards — in normal flow below the hero content, no overlap */}
+          <div className="relative z-10 w-full">
             <div className="container mx-auto px-4 md:px-6">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-10 pt-4">
                 {[
