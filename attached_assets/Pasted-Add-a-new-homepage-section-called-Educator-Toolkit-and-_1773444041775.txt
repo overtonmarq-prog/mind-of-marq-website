@@ -1,0 +1,204 @@
+Add a new homepage section called Educator Toolkit and create a downloadable one-page PDF resource called Educator_Starter_Kit_MOM_Kids.pdf.
+
+Do not change the overall site structure or existing copy unless needed to place this new section cleanly.
+
+Goal:
+Make the website more useful to educators by adding a practical teacher-facing section with a real downloadable starter resource.
+
+SECTION TO ADD
+
+Place this new section on the homepage:
+After the Classroom Impact section
+Before the Featured Books section
+
+Section title:
+Educator Toolkit
+
+Section subtitle:
+Ready to use materials that turn stories into classroom activities.
+
+Add three small content cards or columns with these headings and descriptions:
+
+1. Lesson Starters
+Short discussion prompts tied to each story’s STEM idea and SEL theme.
+
+2. Activity Sheets
+Printable pages for reflection, science observation, drawing, and writing.
+
+3. Classroom Connections
+Ideas for linking the story to science units, writing exercises, or group discussion.
+
+Add a centered CTA button:
+Download Sample Classroom Kit
+
+Add this line under the button:
+Teachers can explore how Mind of Marq stories support STEM curiosity and social emotional learning in real classrooms.
+
+DESIGN REQUIREMENTS
+
+Keep the existing site style:
+1. premium literary and educational modern
+2. same neutral academic palette
+3. deep teal accent
+4. rounded cards
+5. subtle shadows
+6. mobile responsive
+7. strong spacing
+8. same typography system
+
+The new section should feel fully integrated into the current site.
+
+PDF REQUIREMENT
+
+Create a one-page downloadable PDF called:
+Educator_Starter_Kit_MOM_Kids.pdf
+
+Put it in the public folder so the button can link to it directly.
+
+If generating the PDF directly is difficult in the current build, then:
+1. create a clean HTML version of the classroom kit in the public folder
+2. also create a print-friendly version styled for PDF export
+3. wire the button so it downloads or opens the file cleanly
+
+PDF CONTENT
+
+Title:
+Story Driven STEM and SEL Classroom Starter Kit
+
+Subtitle:
+Sample activities inspired by Mind of Marq stories designed to encourage curiosity, perseverance, and self discovery.
+
+Section 1
+Story Inspiration
+
+Heading:
+Percy’s First Resolution
+
+Text:
+A young penguin sets a goal and discovers that growth comes through practice, failure, and persistence.
+
+Students explore how determination and curiosity lead to new discoveries. Percy trains, experiments, and keeps trying even after setbacks.
+
+Section 2
+STEM Exploration Activity
+
+Heading:
+Gravity and Motion
+
+Text:
+Ask students:
+Why can birds fly but penguins cannot?
+
+Discuss gravity and wing structure.
+
+Activity:
+Have students experiment with paper wings.
+
+Try three wing shapes:
+Flat
+Curved
+Wide
+
+Drop each design and observe how they move.
+
+Discussion questions:
+Which wing shape stayed in the air the longest
+Why do you think that happened
+
+Learning focus:
+Observation
+Experimentation
+Scientific thinking
+
+Section 3
+Social Emotional Learning Discussion
+
+Heading:
+Goal Setting
+
+Text:
+Ask students:
+Have you ever tried something that felt impossible at first?
+
+Discussion prompts:
+What helped Percy keep trying
+Why is practice important
+What does it feel like when someone believes in you
+
+Reflection:
+Students write one personal goal they want to try this year.
+
+Section 4
+Nature and Growth Activity
+
+Heading:
+Caterpillar Transformation
+
+Text:
+Inspired by The Brief but Spectacular Lives of Caterpillars.
+
+Ask students:
+How do animals change as they grow?
+
+Activity:
+Students draw four stages of a butterfly life cycle.
+
+Egg
+Caterpillar
+Chrysalis
+Butterfly
+
+Discussion:
+What changes during transformation
+How do people grow and change too
+
+Section 5
+Movement and Balance
+
+Heading:
+Inspired by Confessions of a Teenaged Martial Artist
+
+Text:
+Discuss how balance, posture, and body control help athletes.
+
+Activity:
+Have students stand on one foot for ten seconds.
+
+Then try again with arms extended.
+
+Discuss:
+Why does balance matter in sports and movement?
+
+Closing line:
+Stories help students explore science, understand emotions, and imagine new possibilities.
+
+Mind of Marq Kids combines storytelling with learning experiences that support both STEM curiosity and social emotional growth.
+
+Footer:
+Mind of Marq Publishing
+The Mind of Marq Storyworld
+
+Website:
+themindofmarq.com
+
+Contact:
+marq@mindofmarq.com
+
+TECHNICAL REQUIREMENTS
+
+1. Add the new section into the existing homepage cleanly
+2. Create the downloadable resource file
+3. Put the file in a stable public location
+4. Link the button correctly
+5. Make sure the site still builds without errors
+6. Keep all current content intact
+7. Do not break Netlify deployment
+8. Confirm npm run build succeeds after the update
+
+AFTER YOU FINISH
+
+Tell me:
+1. what files were added or changed
+2. where the classroom kit file is stored
+3. what URL path the download button uses
+4. whether the build passed successfully

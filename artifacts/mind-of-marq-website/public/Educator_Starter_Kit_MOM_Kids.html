@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Story-Driven STEM & SEL Classroom Starter Kit — Mind of Marq</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal: #197a6e;
+      --teal-light: #e8f5f3;
+      --slate: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #faf9f7;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--slate);
+      padding: 0;
+      margin: 0;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 40px;
+    }
+
+    /* ── Header ── */
+    .header {
+      border-bottom: 3px solid var(--teal);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .brand-line {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+    .doc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--slate);
+      line-height: 1.15;
+      margin-top: 4px;
+    }
+    .doc-subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 560px;
+      margin-top: 8px;
+    }
+
+    /* ── Section ── */
+    .section {
+      margin-bottom: 36px;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: var(--teal-light);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 12px;
+    }
+    .section-body {
+      font-size: 14px;
+      color: #334155;
+      line-height: 1.75;
+    }
+    .section-body p { margin-bottom: 10px; }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--teal);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-top: 14px;
+    }
+    .card-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 6px;
+    }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--slate);
+      margin-bottom: 8px;
+    }
+    .card-body {
+      font-size: 13.5px;
+      color: #475569;
+      line-height: 1.7;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .tag {
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--teal-light);
+      color: var(--teal);
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .prompt-list {
+      list-style: none;
+      margin-top: 10px;
+    }
+    .prompt-list li {
+      font-size: 13.5px;
+      color: #475569;
+      padding: 6px 0 6px 20px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      line-height: 1.6;
+    }
+    .prompt-list li:last-child { border-bottom: none; }
+    .prompt-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* ── Activity steps ── */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-text {
+      font-size: 13.5px;
+      color: #475569;
+      line-height: 1.65;
+    }
+
+    /* ── Two-column layout ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    /* ── Closing ── */
+    .closing {
+      background: var(--slate);
+      color: white;
+      border-radius: 12px;
+      padding: 28px 30px;
+      margin-top: 40px;
+    }
+    .closing p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.8);
+    }
+    .closing p + p { margin-top: 10px; }
+    .closing strong { color: white; }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--teal);
+    }
+    .footer-brand span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .footer-contact {
+      text-align: right;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .footer-contact a { color: var(--teal); text-decoration: none; }
+
+    /* ── Print ── */
+    @media print {
+      body { background: white; }
+      .page { padding: 32px 32px; max-width: 100%; }
+      .card, .closing { page-break-inside: avoid; }
+      .section { page-break-inside: avoid; }
+    }
+
+    /* ── Print button (screen only) ── */
+    .print-bar {
+      background: var(--teal);
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .print-bar button {
+      background: white;
+      color: var(--teal);
+      border: none;
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-left: 12px;
+    }
+    @media print { .print-bar { display: none; } }
+  </style>
+</head>
+<body>
+
+<div class="print-bar">
+  Mind of Marq — Educator Starter Kit
+  <button onclick="window.print()">Save as PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <span class="brand-line">Mind of Marq Publishing · M.O.M. Kids Storyworld</span>
+    <h1 class="doc-title">Story-Driven STEM &amp; SEL<br>Classroom Starter Kit</h1>
+    <p class="doc-subtitle">Sample activities inspired by Mind of Marq stories — designed to encourage curiosity, perseverance, and self-discovery.</p>
+  </div>
+
+  <!-- Section 1: Story Inspiration -->
+  <div class="section">
+    <span class="section-label">Section 1 · Story Inspiration</span>
+    <h2 class="section-title">Percy's First Resolution</h2>
+    <div class="section-body">
+      <p>A young penguin sets a goal and discovers that growth comes through practice, failure, and persistence. Students explore how determination and curiosity lead to new discoveries. Percy trains, experiments, and keeps trying even after setbacks.</p>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Goal Setting</span>
+      <span class="tag">Resilience</span>
+      <span class="tag">STEM Curiosity</span>
+      <span class="tag">Ages 6–8</span>
+    </div>
+  </div>
+
+  <!-- Section 2: STEM Activity -->
+  <div class="section">
+    <span class="section-label">Section 2 · STEM Exploration Activity</span>
+    <h2 class="section-title">Gravity and Motion</h2>
+    <div class="section-body">
+      <p><strong>Ask students:</strong> Why can birds fly but penguins cannot? Discuss gravity and wing structure.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Hands-On Activity</div>
+      <div class="card-title">Paper Wing Experiment</div>
+      <div class="card-body">
+        <p>Have students experiment with paper wings. Try three wing shapes:</p>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-text"><strong>Flat</strong> — drop and observe movement</div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-text"><strong>Curved</strong> — drop and observe movement</div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-text"><strong>Wide</strong> — drop and observe movement</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-label">Discussion Questions</div>
+        <ul class="prompt-list">
+          <li>Which wing shape stayed in the air longest?</li>
+          <li>Why do you think that happened?</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Learning Focus</div>
+        <div class="tag-row" style="margin-top:6px">
+          <span class="tag">Observation</span>
+          <span class="tag">Experimentation</span>
+          <span class="tag">Scientific Thinking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: SEL Discussion -->
+  <div class="section">
+    <span class="section-label">Section 3 · Social Emotional Learning</span>
+    <h2 class="section-title">Goal Setting</h2>
+    <div class="section-body">
+      <p><strong>Ask students:</strong> Have you ever tried something that felt impossible at first?</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Discussion Prompts</div>
+      <ul class="prompt-list">
+        <li>What helped Percy keep trying?</li>
+        <li>Why is practice important?</li>
+        <li>What does it feel like when someone believes in you?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:10px">
+      <div class="card-label">Reflection Activity</div>
+      <div class="card-body">Students write one personal goal they want to try this year.</div>
+    </div>
+  </div>
+
+  <!-- Section 4: Nature & Growth -->
+  <div class="section">
+    <span class="section-label">Section 4 · Nature and Growth</span>
+    <h2 class="section-title">Caterpillar Transformation</h2>
+    <div class="section-body">
+      <p>Inspired by <em>The Brief but Spectacular Lives of Caterpillars</em>.</p>
+      <p><strong>Ask students:</strong> How do animals change as they grow?</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Drawing Activity · 4 Stages of a Butterfly Life Cycle</div>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text"><strong>Egg</strong></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text"><strong>Caterpillar</strong></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text"><strong>Chrysalis</strong></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text"><strong>Butterfly</strong></div></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:10px">
+      <div class="card-label">Discussion</div>
+      <ul class="prompt-list">
+        <li>What changes during transformation?</li>
+        <li>How do people grow and change too?</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 5: Movement & Balance -->
+  <div class="section">
+    <span class="section-label">Section 5 · Movement and Balance</span>
+    <h2 class="section-title">Inspired by Confessions of a Teenaged Martial Artist</h2>
+    <div class="section-body">
+      <p>Discuss how balance, posture, and body control help athletes.</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Movement Activity</div>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Have students stand on one foot for ten seconds.</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Try again with arms extended.</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Discuss: Why does balance matter in sports and movement?</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Closing -->
+  <div class="closing">
+    <p>Stories help students explore science, understand emotions, and imagine new possibilities.</p>
+    <p><strong>Mind of Marq Kids</strong> combines storytelling with learning experiences that support both STEM curiosity and social emotional growth.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>
+      <div class="footer-brand">
+        Mind of Marq Publishing
+        <span>The Mind of Marq Storyworld</span>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <a href="https://themindofmarq.com">themindofmarq.com</a><br>
+      <a href="mailto:marq@mindofmarq.com">marq@mindofmarq.com</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
