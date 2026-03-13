@@ -1,0 +1,317 @@
+Add a new book feature section to the website for:
+
+Confessions of a Teenaged Martial Artist
+
+Goal:
+Create a polished, educator-friendly, library-friendly website section that showcases this title as a serious middle grade / YA crossover book with strong appeal for boys, educators, librarians, and school partners.
+
+Important:
+1. Keep the current site design system
+2. Match the existing premium literary and educational modern look
+3. Use the current spacing, typography, colors, rounded cards, and shadows
+4. Make the section fully responsive
+5. Do not break the current homepage layout
+6. Keep the site build and Netlify deployment working
+
+PLACEMENT
+
+Add this as a dedicated book spotlight section on the website.
+
+Suggested placement:
+Inside the Books area, or as a dedicated featured title block directly after the Featured Books section.
+
+Order inside the section should be:
+
+1. Cover image
+2. Book description
+3. Why Boys Connect
+4. Educator themes
+5. Chapter preview
+6. Educator contact button
+
+SECTION TITLE
+
+Confessions of a Teenaged Martial Artist
+
+DISPLAY SUBTITLE
+
+The Training He Thought He Lost
+
+Was Training Him All Along
+
+If a two-line subtitle feels awkward in the design, combine it into one elegant subtitle line:
+The Training He Thought He Lost Was Training Him All Along
+
+COVER IMAGE
+
+Use the provided cover image for this section.
+Add it in a clean book feature layout.
+If needed, place the cover on the left and the text content on the right for desktop.
+On mobile, stack the image above the text.
+
+BOOK DESCRIPTION COPY
+
+Use this exact copy:
+
+Xavier Williams has only one dream.
+
+Martial arts.
+
+Not just learning it. Mastering it.
+
+From the time he is young, Xavier studies every move he sees in martial arts films. His father quietly encourages the fascination, turning movie nights into small lessons about discipline, patience, and focus.
+
+Then tragedy strikes.
+
+After his father dies unexpectedly, Xavier loses more than a parent. He loses the person who understood his dream.
+
+His mother, now raising three children alone, refuses to allow martial arts training. Fear and responsibility reshape the household overnight.
+
+Instead, Xavier must choose a safe after-school activity.
+
+The result is the last place he ever expected to find himself.
+
+A ballet studio.
+
+Embarrassed and angry, Xavier enters determined not to belong. He disrupts class. He refuses to participate. He waits for someone to send him home.
+
+But one instructor refuses to give up on him.
+
+Ms. Celeste Overton sees something Xavier does not yet understand about himself. Beneath the resistance is an athlete with unusual balance, strength, and discipline.
+
+Slowly, reluctantly, Xavier begins to train.
+
+What he discovers surprises everyone.
+
+The same control that creates powerful martial arts movements lives inside the structure of ballet.
+
+Balance.
+
+Timing.
+
+Precision.
+
+Power.
+
+Without realizing it, Xavier begins developing the very skills he once hoped to learn in a dojo.
+
+The training he thought he lost may have been preparing him all along.
+
+EDUCATOR / LIBRARIAN EXCITEMENT BLOCK
+
+Add a subheading:
+
+Why Educators and Librarians Are Excited About This Story
+
+Use this exact copy:
+
+Confessions of a Teenaged Martial Artist blends athletics, performing arts, and emotional growth into a powerful coming-of-age story.
+
+Students encounter a young boy navigating grief, identity, and expectations while discovering discipline and purpose.
+
+The story challenges stereotypes about masculinity and performance arts while highlighting the role teachers and mentors play in shaping young lives.
+
+WHY BOYS CONNECT BLOCK
+
+Add a subheading:
+
+Why Boys Especially Connect With This Book
+
+Use this exact copy:
+
+Many boys struggle to see themselves reflected in school reading assignments.
+
+This story begins where many boys already live.
+
+Movement.
+
+Competition.
+
+Training.
+
+Strength.
+
+But the narrative expands their understanding of what strength actually means.
+
+Students see a character who learns that control, discipline, and emotional resilience are just as important as physical power.
+
+The result is a story that resonates strongly with:
+
+• student athletes
+• reluctant readers
+• boys navigating confidence and identity
+• students dealing with grief or change
+
+THEMES FOR CLASSROOM DISCUSSION
+
+Add a subheading:
+
+Themes for Classroom Discussion
+
+Use this bullet list:
+
+• perseverance and resilience
+• grief and emotional growth
+• mentorship and teacher influence
+• discipline through athletics and the arts
+• identity and self-confidence
+• challenging stereotypes about boys and dance
+
+EDUCATIONAL CONNECTIONS
+
+Add a subheading:
+
+Educational Connections
+
+Use this copy:
+
+The book naturally supports discussions in:
+
+Social Emotional Learning
+students explore resilience, grief, and personal growth
+
+Arts and Performance Education
+dance as athletic training and discipline
+
+Physical Education
+balance, body awareness, and controlled movement
+
+Character Development
+how setbacks can lead to unexpected strengths
+
+RECOMMENDED READING LEVEL
+
+Add a subheading:
+
+Recommended Reading Level
+
+Use:
+Grades 6–10
+
+PERFECT FOR READERS WHO ENJOY
+
+Add a subheading:
+
+Perfect for readers who enjoy:
+
+Use this bullet list:
+
+• martial arts stories
+• sports-driven narratives
+• dance and performance
+• coming-of-age fiction
+• character-driven storytelling
+
+CHAPTER PREVIEW
+
+Add a subheading:
+
+Read the First Chapter
+
+Use this exact excerpt:
+
+Ever since he could remember, Xavier wanted to learn martial arts.
+
+Not just learn it.
+
+Master it.
+
+Karate. Kung fu. Judo. Taekwondo. Any of it.
+
+He studied the movements the way other kids studied video games. Every kick. Every block. Every stance.
+
+His favorite move was the flying roundhouse kick.
+
+Whenever he tried it, people always used the same two words.
+
+Graceful.
+
+Powerful.
+
+Sometimes they added a third word when it landed just right.
+
+Nasty.
+
+Xavier didn’t mind that word.
+
+To him, it meant progress.
+
+But the real story of how he learned those movements was not what anyone expected.
+
+Because Xavier never actually began his martial arts training in a dojo.
+
+The training that shaped him started somewhere far more ordinary.
+
+A movie theater seat.
+
+Right next to his father.
+
+FINAL CTA BLOCK
+
+Add a closing CTA area with this heading:
+
+Bring This Story to Your Students
+
+Use this copy:
+
+Mind of Marq Publishing offers resources for:
+
+• classroom discussion guides
+• SEL learning connections
+• school and library reading programs
+• author talks and visits
+• educator and library bulk orders
+
+Educators and librarians interested in introducing this story to their students can contact Mind of Marq Publishing through the website.
+
+Add a strong button:
+
+Contact for School and Library Information
+
+Link the button to the existing contact section anchor:
+#contact
+
+DESIGN NOTES
+
+1. Make this section feel premium and emotionally grounded
+2. The cover image should feel important and prominent
+3. The chapter preview should be styled like a sample reading excerpt, not a plain paragraph dump
+4. Use clear section breaks for scanning
+5. Use card styling where it improves readability
+6. Keep educator-facing content easy to skim
+7. Maintain strong readability on mobile
+
+OPTIONAL ENHANCEMENTS IF THEY FIT CLEANLY
+
+1. Add a small badge near the title:
+Grades 6–10
+2. Add a badge row:
+Coming of Age
+Athletics
+Arts
+SEL
+Identity
+3. Add subtle divider lines between content groups
+
+IMAGE HANDLING
+
+Use the provided uploaded cover image for this section.
+Store or reference it in the appropriate public assets location if needed.
+Make sure the image path works in production and Netlify.
+
+TECHNICAL REQUIREMENTS
+
+1. Do not break the current Vite + React + TypeScript + Tailwind setup
+2. Keep the build clean
+3. Make sure npm run build still succeeds
+4. Make sure the new section works on desktop and mobile
+5. Do not remove existing site sections
+6. Integrate this section naturally into the existing homepage or book area
+
+AFTER COMPLETING
+
+Tell me:
+1. which files were changed
+2. where the image was stored or referenced
+3. where this new section was placed on the site
+4. whether npm run build passed
