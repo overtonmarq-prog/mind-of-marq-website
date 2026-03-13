@@ -552,6 +552,320 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ─── MARTIAL ARTIST SPOTLIGHT ────────────────────────────────── */}
+        <section id="confessions" className="py-24 bg-white">
+          <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+
+            {/* ── Section label ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-center mb-16"
+            >
+              <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Featured Title</span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 leading-tight">
+                Confessions of a Teenaged Martial Artist
+              </h2>
+              <p className="text-xl md:text-2xl font-serif italic text-primary/80 mb-6 max-w-2xl mx-auto leading-snug">
+                The Training He Thought He Lost Was Training Him All Along
+              </p>
+              {/* Badge row */}
+              <div className="flex flex-wrap justify-center gap-2">
+                {["Grades 6–10", "Coming of Age", "Athletics", "Arts", "SEL", "Identity"].map((b) => (
+                  <span key={b} className="bg-primary/10 text-primary text-xs font-semibold px-3 py-1.5 rounded-full">
+                    {b}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* ── Cover + Description ── */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 items-start">
+              {/* Cover */}
+              <motion.div
+                initial={{ opacity: 0, x: -24 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="flex justify-center"
+              >
+                <div
+                  className="rounded-2xl overflow-hidden max-w-sm w-full"
+                  style={{ boxShadow: "var(--shadow-elegant)" }}
+                >
+                  <img
+                    src="/images/book-martial-arts.png"
+                    alt="Confessions of a Teenaged Martial Artist book cover"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </motion.div>
+
+              {/* Description */}
+              <motion.div
+                initial={{ opacity: 0, x: 24 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="space-y-4 text-foreground/90 leading-relaxed text-base"
+              >
+                <p className="font-semibold text-lg">Xavier Williams has only one dream.</p>
+                <p className="text-primary font-bold text-xl font-serif">Martial arts.</p>
+                <p>Not just learning it. Mastering it.</p>
+                <p>From the time he is young, Xavier studies every move he sees in martial arts films. His father quietly encourages the fascination, turning movie nights into small lessons about discipline, patience, and focus.</p>
+                <p className="font-semibold">Then tragedy strikes.</p>
+                <p>After his father dies unexpectedly, Xavier loses more than a parent. He loses the person who understood his dream.</p>
+                <p>His mother, now raising three children alone, refuses to allow martial arts training. Fear and responsibility reshape the household overnight.</p>
+                <p>Instead, Xavier must choose a safe after-school activity.</p>
+                <p>The result is the last place he ever expected to find himself.</p>
+                <p className="font-semibold text-lg">A ballet studio.</p>
+                <p>Embarrassed and angry, Xavier enters determined not to belong. But one instructor refuses to give up on him.</p>
+                <p>Ms. Celeste Overton sees something Xavier does not yet understand about himself. Beneath the resistance is an athlete with unusual balance, strength, and discipline.</p>
+                <p>What he discovers surprises everyone. The same control that creates powerful martial arts movements lives inside the structure of ballet.</p>
+                <div className="flex flex-wrap gap-4 pt-2">
+                  {["Balance.", "Timing.", "Precision.", "Power."].map((w) => (
+                    <span key={w} className="text-primary font-bold font-serif text-lg">{w}</span>
+                  ))}
+                </div>
+                <p className="italic text-muted-foreground">The training he thought he lost may have been preparing him all along.</p>
+              </motion.div>
+            </div>
+
+            {/* ── Divider ── */}
+            <div className="border-t border-border/50 mb-16" />
+
+            {/* ── Educator + Library excitement ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-secondary/40 rounded-2xl p-8 md:p-10 border border-border/60 mb-8"
+              style={{ boxShadow: "var(--shadow-subtle)" }}
+            >
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">Why Educators and Librarians Are Excited About This Story</h3>
+              <p className="text-muted-foreground leading-relaxed mb-3">Confessions of a Teenaged Martial Artist blends athletics, performing arts, and emotional growth into a powerful coming-of-age story.</p>
+              <p className="text-muted-foreground leading-relaxed mb-3">Students encounter a young boy navigating grief, identity, and expectations while discovering discipline and purpose.</p>
+              <p className="text-muted-foreground leading-relaxed">The story challenges stereotypes about masculinity and performance arts while highlighting the role teachers and mentors play in shaping young lives.</p>
+            </motion.div>
+
+            {/* ── Why Boys Connect ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-10 mb-8"
+            >
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">Why Boys Especially Connect With This Book</h3>
+              <p className="text-muted-foreground leading-relaxed mb-3">Many boys struggle to see themselves reflected in school reading assignments. This story begins where many boys already live.</p>
+              <div className="flex flex-wrap gap-3 my-4">
+                {["Movement", "Competition", "Training", "Strength"].map((w) => (
+                  <span key={w} className="bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full">{w}</span>
+                ))}
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-4">But the narrative expands their understanding of what strength actually means. Students see a character who learns that control, discipline, and emotional resilience are just as important as physical power.</p>
+              <p className="text-sm font-semibold text-foreground mb-2">The story resonates strongly with:</p>
+              <ul className="space-y-1.5">
+                {[
+                  "student athletes",
+                  "reluctant readers",
+                  "boys navigating confidence and identity",
+                  "students dealing with grief or change",
+                ].map((item) => (
+                  <li key={item} className="flex gap-2 text-muted-foreground">
+                    <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* ── Themes + Educational Connections (2-col) ── */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {/* Themes */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="bg-white rounded-2xl p-8 border border-border/60"
+                style={{ boxShadow: "var(--shadow-subtle)" }}
+              >
+                <h3 className="text-xl font-serif font-bold text-foreground mb-4">Themes for Classroom Discussion</h3>
+                <ul className="space-y-2">
+                  {[
+                    "perseverance and resilience",
+                    "grief and emotional growth",
+                    "mentorship and teacher influence",
+                    "discipline through athletics and the arts",
+                    "identity and self-confidence",
+                    "challenging stereotypes about boys and dance",
+                  ].map((t) => (
+                    <li key={t} className="flex gap-2 text-muted-foreground text-sm">
+                      <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Educational connections */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="bg-white rounded-2xl p-8 border border-border/60"
+                style={{ boxShadow: "var(--shadow-subtle)" }}
+              >
+                <h3 className="text-xl font-serif font-bold text-foreground mb-4">Educational Connections</h3>
+                <div className="space-y-4">
+                  {[
+                    { label: "Social Emotional Learning", desc: "students explore resilience, grief, and personal growth" },
+                    { label: "Arts and Performance Education", desc: "dance as athletic training and discipline" },
+                    { label: "Physical Education", desc: "balance, body awareness, and controlled movement" },
+                    { label: "Character Development", desc: "how setbacks can lead to unexpected strengths" },
+                  ].map((item) => (
+                    <div key={item.label}>
+                      <p className="text-sm font-bold text-foreground">{item.label}</p>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* ── Reading Level + Perfect For (2-col) ── */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="bg-white rounded-2xl p-8 border border-border/60"
+                style={{ boxShadow: "var(--shadow-subtle)" }}
+              >
+                <h3 className="text-xl font-serif font-bold text-foreground mb-3">Recommended Reading Level</h3>
+                <p className="text-4xl font-serif font-bold text-primary">Grades 6–10</p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="bg-white rounded-2xl p-8 border border-border/60"
+                style={{ boxShadow: "var(--shadow-subtle)" }}
+              >
+                <h3 className="text-xl font-serif font-bold text-foreground mb-4">Perfect for readers who enjoy:</h3>
+                <ul className="space-y-1.5">
+                  {[
+                    "martial arts stories",
+                    "sports-driven narratives",
+                    "dance and performance",
+                    "coming-of-age fiction",
+                    "character-driven storytelling",
+                  ].map((item) => (
+                    <li key={item} className="flex gap-2 text-muted-foreground text-sm">
+                      <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+
+            {/* ── Divider ── */}
+            <div className="border-t border-border/50 mb-16" />
+
+            {/* ── Chapter Preview ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="mb-16"
+            >
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-8 text-center">Read the First Chapter</h3>
+              <div
+                className="bg-secondary/30 border border-border/60 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto"
+                style={{ boxShadow: "var(--shadow-subtle)" }}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="h-0.5 flex-1 bg-primary/20 rounded" />
+                  <span className="text-primary font-bold text-xs tracking-widest uppercase">Chapter Excerpt</span>
+                  <div className="h-0.5 flex-1 bg-primary/20 rounded" />
+                </div>
+                <div className="space-y-4 text-foreground/85 leading-relaxed font-serif text-lg">
+                  <p>Ever since he could remember, Xavier wanted to learn martial arts.</p>
+                  <p className="font-semibold">Not just learn it.</p>
+                  <p className="font-semibold">Master it.</p>
+                  <p>Karate. Kung fu. Judo. Taekwondo. Any of it.</p>
+                  <p>He studied the movements the way other kids studied video games. Every kick. Every block. Every stance.</p>
+                  <p>His favorite move was the flying roundhouse kick.</p>
+                  <p>Whenever he tried it, people always used the same two words.</p>
+                  <div className="flex gap-6 my-2">
+                    <span className="text-primary font-bold italic text-xl">Graceful.</span>
+                    <span className="text-primary font-bold italic text-xl">Powerful.</span>
+                  </div>
+                  <p>Sometimes they added a third word when it landed just right.</p>
+                  <p className="text-primary font-bold italic text-xl">Nasty.</p>
+                  <p>Xavier didn't mind that word.</p>
+                  <p>To him, it meant progress.</p>
+                  <p>But the real story of how he learned those movements was not what anyone expected.</p>
+                  <p>Because Xavier never actually began his martial arts training in a dojo.</p>
+                  <p>The training that shaped him started somewhere far more ordinary.</p>
+                  <p className="font-semibold text-foreground">A movie theater seat.</p>
+                  <p className="text-muted-foreground italic">Right next to his father.</p>
+                </div>
+                <div className="flex items-center gap-3 mt-8">
+                  <div className="h-0.5 flex-1 bg-primary/20 rounded" />
+                  <span className="text-primary/50 text-xs tracking-widest uppercase font-semibold">End of Excerpt</span>
+                  <div className="h-0.5 flex-1 bg-primary/20 rounded" />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* ── Final CTA ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="max-w-2xl mx-auto bg-foreground text-background rounded-2xl p-10 text-center"
+              style={{ boxShadow: "var(--shadow-elegant)" }}
+            >
+              <h3 className="text-2xl font-serif font-bold mb-3">Bring This Story to Your Students</h3>
+              <p className="text-background/70 mb-6 leading-relaxed">Mind of Marq Publishing offers resources for:</p>
+              <ul className="text-left inline-block text-background/80 space-y-1.5 mb-8">
+                {[
+                  "classroom discussion guides",
+                  "SEL learning connections",
+                  "school and library reading programs",
+                  "author talks and visits",
+                  "educator and library bulk orders",
+                ].map((item) => (
+                  <li key={item} className="flex gap-2 text-sm">
+                    <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-background/60 text-sm mb-8">Educators and librarians interested in introducing this story to their students can contact Mind of Marq Publishing through the website.</p>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2.5 bg-primary hover:bg-primary/90 text-white font-semibold px-9 py-4 rounded-full transition-colors text-base shadow-md hover:shadow-lg"
+              >
+                <GraduationCap className="w-5 h-5" />
+                Contact for School and Library Information
+              </a>
+            </motion.div>
+
+          </div>
+        </section>
+
         {/* ─── EDUCATORS + LIBRARIES ───────────────────────────────────── */}
         <section id="educators" className="py-24 bg-secondary">
           <div className="container mx-auto px-4 md:px-6">
