@@ -1,0 +1,26 @@
+packages:
+  "framer-motion": "For premium smooth scroll reveals and page transitions"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility to merge tailwind classes safely"
+
+images:
+  - path: "artifacts/mind-of-marq-website/public/images/hero-bg.png"
+    description: "Subtle, elegant abstract background with soft deep teal and warm stone watercolor textures, premium literary feel"
+    aspect_ratio: "16:9"
+  - path: "artifacts/mind-of-marq-website/public/images/book-percy.png"
+    description: "Premium children's book cover illustration of a determined young penguin in a snowy landscape, elegant typography layout space"
+    aspect_ratio: "3:4"
+  - path: "artifacts/mind-of-marq-website/public/images/book-caterpillar.png"
+    description: "Premium children's book cover illustration of a whimsical nature scene with glowing caterpillars transforming, magical atmosphere"
+    aspect_ratio: "3:4"
+  - path: "artifacts/mind-of-marq-website/public/images/book-martial-arts.png"
+    description: "Premium middle grade book cover illustration showing a dynamic silhouette blending martial arts and ballet poses, deep teal and warm colors"
+    aspect_ratio: "3:4"
+  - path: "artifacts/mind-of-marq-website/public/images/about-library.png"
+    description: "Warm, inviting modern library or publishing house interior with elegant bookshelves, soft lighting, and deep teal accents"
+    aspect_ratio: "16:9"
+
+notes:
+  - "Requires Netlify form handling for the contact section"
+  - "Single page application using smooth scrolling to anchor links"
+  - "Styling overrides applied to match the specific 'premium literary' brief with teal/stone palette"
