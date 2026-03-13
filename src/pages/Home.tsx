@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { BookOpen, GraduationCap, Clapperboard, CheckCircle2, ChevronRight } from "lucide-react";
+import { BookOpen, GraduationCap, Clapperboard, CheckCircle2, ChevronRight, Download, MessageSquare, FileText, Link2 } from "lucide-react";
 
 const THEATER_ICON = (
   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -371,8 +371,10 @@ export default function Home() {
         </section>
 
         {/* ─── EDUCATOR TOOLKIT ────────────────────────────────────────── */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4 md:px-6">
+
+            {/* Heading */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -391,25 +393,26 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {/* Three cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
               {[
                 {
                   num: "01",
                   title: "Lesson Starters",
                   desc: "Short discussion prompts tied to each story's STEM idea and SEL theme.",
-                  icon: <BookOpen className="w-7 h-7 text-primary" />,
+                  icon: <MessageSquare className="w-6 h-6 text-primary" />,
                 },
                 {
                   num: "02",
                   title: "Activity Sheets",
                   desc: "Printable pages for reflection, science observation, drawing, and writing.",
-                  icon: <GraduationCap className="w-7 h-7 text-primary" />,
+                  icon: <FileText className="w-6 h-6 text-primary" />,
                 },
                 {
                   num: "03",
                   title: "Classroom Connections",
                   desc: "Ideas for linking the story to science units, writing exercises, or group discussion.",
-                  icon: <CheckCircle2 className="w-7 h-7 text-primary" />,
+                  icon: <Link2 className="w-6 h-6 text-primary" />,
                 },
               ].map((card, i) => (
                 <motion.div
@@ -418,39 +421,44 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-secondary/40 rounded-2xl p-8 border border-border"
+                  className="bg-white rounded-2xl p-8 border border-border/60 transition-all duration-300 hover:-translate-y-1"
                   style={{ boxShadow: "var(--shadow-subtle)" }}
                 >
-                  <div className="flex items-center gap-3 mb-5">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                     {card.icon}
-                    <span className="text-xs font-bold tracking-widest text-primary uppercase">{card.num}</span>
                   </div>
-                  <h3 className="text-xl font-serif font-bold mb-3">{card.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{card.desc}</p>
+                  <p className="text-xs font-bold tracking-widest text-primary/60 uppercase mb-2">{card.num}</p>
+                  <h3 className="text-xl font-serif font-bold mb-3 text-foreground">{card.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{card.desc}</p>
                 </motion.div>
               ))}
             </div>
 
+            {/* CTA block */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-center"
+              className="max-w-2xl mx-auto bg-white rounded-2xl border border-border/60 border-t-4 border-t-primary p-10 text-center"
+              style={{ boxShadow: "var(--shadow-elegant)" }}
             >
+              <GraduationCap className="w-10 h-10 text-primary mx-auto mb-5" />
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-3">Sample Classroom Kit</h3>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Teachers can explore how Mind of Marq stories support STEM curiosity and social emotional learning in real classrooms.
+              </p>
               <a
                 href="/Educator_Starter_Kit_MOM_Kids.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded-full transition-colors text-base"
+                className="inline-flex items-center gap-2.5 bg-primary hover:bg-primary/90 text-white font-semibold px-9 py-4 rounded-full transition-colors text-base shadow-md hover:shadow-lg"
               >
-                <BookOpen className="w-5 h-5" />
+                <Download className="w-5 h-5" />
                 Download Sample Classroom Kit
               </a>
-              <p className="text-sm text-muted-foreground mt-4 max-w-xl mx-auto leading-relaxed">
-                Teachers can explore how Mind of Marq stories support STEM curiosity and social emotional learning in real classrooms.
-              </p>
             </motion.div>
+
           </div>
         </section>
 
