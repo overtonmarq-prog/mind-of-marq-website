@@ -561,20 +561,19 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Featured Title</span>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4 leading-tight">
+              <span className="text-primary font-bold tracking-wider uppercase text-sm mb-5 block">Featured Title</span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-5 leading-tight max-w-2xl mx-auto">
                 Confessions of a Teenaged Martial Artist
               </h2>
-              <p className="text-xl md:text-2xl font-serif italic text-primary/80 mb-6 max-w-2xl mx-auto leading-snug">
-                The Training He Thought He Lost Was Training Him All Along
+              <p className="text-xl md:text-2xl font-serif italic text-primary/75 mb-8 max-w-xl mx-auto leading-relaxed">
+                The Training He Thought He Lost<br className="hidden sm:block" /> Was Training Him All Along
               </p>
-              {/* Badge row */}
               <div className="flex flex-wrap justify-center gap-2">
                 {["Grades 6–10", "Coming of Age", "Athletics", "Arts", "SEL", "Identity"].map((b) => (
-                  <span key={b} className="bg-primary/10 text-primary text-xs font-semibold px-3 py-1.5 rounded-full">
+                  <span key={b} className="bg-primary/10 text-primary text-xs font-semibold px-3.5 py-1.5 rounded-full tracking-wide">
                     {b}
                   </span>
                 ))}
@@ -582,59 +581,80 @@ export default function Home() {
             </motion.div>
 
             {/* ── Cover + Description ── */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 items-start">
-              {/* Cover */}
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 mb-20 items-start">
+
+              {/* Cover — sticky on desktop so it stays visible while reading */}
               <motion.div
                 initial={{ opacity: 0, x: -24 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="flex justify-center"
+                transition={{ duration: 0.7 }}
+                className="flex justify-center lg:sticky lg:top-8"
               >
-                <div
-                  className="rounded-2xl overflow-hidden max-w-sm w-full"
-                  style={{ boxShadow: "var(--shadow-elegant)" }}
-                >
-                  <img
-                    src="/images/book-martial-arts.png"
-                    alt="Confessions of a Teenaged Martial Artist book cover"
-                    className="w-full h-auto object-cover"
-                  />
+                <div className="relative max-w-[320px] w-full">
+                  {/* Decorative teal ring behind the cover */}
+                  <div className="absolute -inset-3 rounded-3xl bg-primary/8 -z-10" />
+                  <div
+                    className="rounded-2xl overflow-hidden"
+                    style={{ boxShadow: "0 20px 60px -10px rgba(25,122,110,0.25), 0 8px 24px -4px rgba(0,0,0,0.15)" }}
+                  >
+                    <img
+                      src="/images/book-martial-arts.png"
+                      alt="Confessions of a Teenaged Martial Artist book cover"
+                      className="w-full h-auto object-cover block"
+                    />
+                  </div>
                 </div>
               </motion.div>
 
-              {/* Description */}
+              {/* Description — three narrative acts */}
               <motion.div
                 initial={{ opacity: 0, x: 24 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="space-y-4 text-foreground/90 leading-relaxed text-base"
+                transition={{ duration: 0.7 }}
               >
-                <p className="font-semibold text-lg">Xavier Williams has only one dream.</p>
-                <p className="text-primary font-bold text-xl font-serif">Martial arts.</p>
-                <p>Not just learning it. Mastering it.</p>
-                <p>From the time he is young, Xavier studies every move he sees in martial arts films. His father quietly encourages the fascination, turning movie nights into small lessons about discipline, patience, and focus.</p>
-                <p className="font-semibold">Then tragedy strikes.</p>
-                <p>After his father dies unexpectedly, Xavier loses more than a parent. He loses the person who understood his dream.</p>
-                <p>His mother, now raising three children alone, refuses to allow martial arts training. Fear and responsibility reshape the household overnight.</p>
-                <p>Instead, Xavier must choose a safe after-school activity.</p>
-                <p>The result is the last place he ever expected to find himself.</p>
-                <p className="font-semibold text-lg">A ballet studio.</p>
-                <p>Embarrassed and angry, Xavier enters determined not to belong. But one instructor refuses to give up on him.</p>
-                <p>Ms. Celeste Overton sees something Xavier does not yet understand about himself. Beneath the resistance is an athlete with unusual balance, strength, and discipline.</p>
-                <p>What he discovers surprises everyone. The same control that creates powerful martial arts movements lives inside the structure of ballet.</p>
-                <div className="flex flex-wrap gap-4 pt-2">
-                  {["Balance.", "Timing.", "Precision.", "Power."].map((w) => (
-                    <span key={w} className="text-primary font-bold font-serif text-lg">{w}</span>
-                  ))}
+                {/* Act 1 — The Dream */}
+                <div className="space-y-3 text-foreground/85 leading-relaxed text-base mb-6">
+                  <p className="font-semibold text-lg text-foreground">Xavier Williams has only one dream.</p>
+                  <p className="text-primary font-bold text-2xl font-serif">Martial arts.</p>
+                  <p>Not just learning it. Mastering it.</p>
+                  <p>From the time he is young, Xavier studies every move he sees in martial arts films. His father quietly encourages the fascination, turning movie nights into small lessons about discipline, patience, and focus.</p>
                 </div>
-                <p className="italic text-muted-foreground">The training he thought he lost may have been preparing him all along.</p>
+
+                {/* Act 2 — The Loss */}
+                <div className="border-l-4 border-primary/30 pl-5 py-1 mb-6 space-y-3 text-foreground/85 leading-relaxed text-base">
+                  <p className="font-semibold text-foreground">Then tragedy strikes.</p>
+                  <p>After his father dies unexpectedly, Xavier loses more than a parent. He loses the person who understood his dream.</p>
+                  <p>His mother, now raising three children alone, refuses to allow martial arts training. Fear and responsibility reshape the household overnight.</p>
+                  <p>Instead, Xavier must choose a safe after-school activity.</p>
+                </div>
+
+                {/* Act 3 — The Studio */}
+                <div className="space-y-3 text-foreground/85 leading-relaxed text-base mb-6">
+                  <p>The result is the last place he ever expected to find himself.</p>
+                  <p className="font-bold text-xl font-serif text-foreground">A ballet studio.</p>
+                  <p>Embarrassed and angry, Xavier enters determined not to belong. But one instructor refuses to give up on him.</p>
+                  <p>Ms. Celeste Overton sees something Xavier does not yet understand about himself. Beneath the resistance is an athlete with unusual balance, strength, and discipline.</p>
+                </div>
+
+                {/* Act 4 — The Discovery */}
+                <div className="bg-secondary/50 rounded-xl p-5 space-y-3 text-foreground/85 leading-relaxed text-base">
+                  <p>What he discovers surprises everyone. The same control that creates powerful martial arts movements lives inside the structure of ballet.</p>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-1">
+                    {["Balance.", "Timing.", "Precision.", "Power."].map((w) => (
+                      <span key={w} className="text-primary font-bold font-serif text-lg block text-center bg-white rounded-lg py-2 px-1 border border-primary/15">
+                        {w}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="italic text-muted-foreground text-sm pt-1">The training he thought he lost may have been preparing him all along.</p>
+                </div>
               </motion.div>
             </div>
 
             {/* ── Divider ── */}
-            <div className="border-t border-border/50 mb-16" />
+            <div className="border-t border-border/40 mb-16" />
 
             {/* ── Educator + Library excitement ── */}
             <motion.div
@@ -642,13 +662,22 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-secondary/40 rounded-2xl p-8 md:p-10 border border-border/60 mb-8"
+              className="bg-secondary/40 rounded-2xl p-8 md:p-10 border border-border/50 mb-8"
               style={{ boxShadow: "var(--shadow-subtle)" }}
             >
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">Why Educators and Librarians Are Excited About This Story</h3>
-              <p className="text-muted-foreground leading-relaxed mb-3">Confessions of a Teenaged Martial Artist blends athletics, performing arts, and emotional growth into a powerful coming-of-age story.</p>
-              <p className="text-muted-foreground leading-relaxed mb-3">Students encounter a young boy navigating grief, identity, and expectations while discovering discipline and purpose.</p>
-              <p className="text-muted-foreground leading-relaxed">The story challenges stereotypes about masculinity and performance arts while highlighting the role teachers and mentors play in shaping young lives.</p>
+              <div className="flex items-center gap-3 mb-6">
+                <GraduationCap className="w-6 h-6 text-primary shrink-0" />
+                <h3 className="text-2xl font-serif font-bold text-foreground">Why Educators and Librarians Are Excited About This Story</h3>
+              </div>
+              <div className="space-y-0 divide-y divide-border/40">
+                {[
+                  "Confessions of a Teenaged Martial Artist blends athletics, performing arts, and emotional growth into a powerful coming-of-age story.",
+                  "Students encounter a young boy navigating grief, identity, and expectations while discovering discipline and purpose.",
+                  "The story challenges stereotypes about masculinity and performance arts while highlighting the role teachers and mentors play in shaping young lives.",
+                ].map((para, i) => (
+                  <p key={i} className="text-muted-foreground leading-relaxed py-4 first:pt-0 last:pb-0">{para}</p>
+                ))}
+              </div>
             </motion.div>
 
             {/* ── Why Boys Connect ── */}
@@ -657,25 +686,25 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-10 mb-8"
+              className="bg-primary/5 border border-primary/15 rounded-2xl p-8 md:p-10 mb-8"
             >
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">Why Boys Especially Connect With This Book</h3>
-              <p className="text-muted-foreground leading-relaxed mb-3">Many boys struggle to see themselves reflected in school reading assignments. This story begins where many boys already live.</p>
-              <div className="flex flex-wrap gap-3 my-4">
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-5">Why Boys Especially Connect With This Book</h3>
+              <p className="text-muted-foreground leading-relaxed mb-5">Many boys struggle to see themselves reflected in school reading assignments. This story begins where many boys already live.</p>
+              <div className="flex flex-wrap gap-2.5 mb-5">
                 {["Movement", "Competition", "Training", "Strength"].map((w) => (
                   <span key={w} className="bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full">{w}</span>
                 ))}
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">But the narrative expands their understanding of what strength actually means. Students see a character who learns that control, discipline, and emotional resilience are just as important as physical power.</p>
-              <p className="text-sm font-semibold text-foreground mb-2">The story resonates strongly with:</p>
-              <ul className="space-y-1.5">
+              <p className="text-muted-foreground leading-relaxed mb-5">But the narrative expands their understanding of what strength actually means. Students see a character who learns that control, discipline, and emotional resilience are just as important as physical power.</p>
+              <p className="text-sm font-semibold text-foreground mb-3">The story resonates strongly with:</p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {[
                   "student athletes",
                   "reluctant readers",
                   "boys navigating confidence and identity",
                   "students dealing with grief or change",
                 ].map((item) => (
-                  <li key={item} className="flex gap-2 text-muted-foreground">
+                  <li key={item} className="flex gap-2 text-muted-foreground text-sm">
                     <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                     {item}
                   </li>
@@ -684,8 +713,7 @@ export default function Home() {
             </motion.div>
 
             {/* ── Themes + Educational Connections (2-col) ── */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              {/* Themes */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -694,8 +722,8 @@ export default function Home() {
                 className="bg-white rounded-2xl p-8 border border-border/60"
                 style={{ boxShadow: "var(--shadow-subtle)" }}
               >
-                <h3 className="text-xl font-serif font-bold text-foreground mb-4">Themes for Classroom Discussion</h3>
-                <ul className="space-y-2">
+                <h3 className="text-xl font-serif font-bold text-foreground mb-5">Themes for Classroom Discussion</h3>
+                <ul className="space-y-3">
                   {[
                     "perseverance and resilience",
                     "grief and emotional growth",
@@ -704,7 +732,7 @@ export default function Home() {
                     "identity and self-confidence",
                     "challenging stereotypes about boys and dance",
                   ].map((t) => (
-                    <li key={t} className="flex gap-2 text-muted-foreground text-sm">
+                    <li key={t} className="flex gap-2 text-muted-foreground text-sm leading-snug">
                       <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                       {t}
                     </li>
@@ -712,7 +740,6 @@ export default function Home() {
                 </ul>
               </motion.div>
 
-              {/* Educational connections */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -721,17 +748,17 @@ export default function Home() {
                 className="bg-white rounded-2xl p-8 border border-border/60"
                 style={{ boxShadow: "var(--shadow-subtle)" }}
               >
-                <h3 className="text-xl font-serif font-bold text-foreground mb-4">Educational Connections</h3>
-                <div className="space-y-4">
+                <h3 className="text-xl font-serif font-bold text-foreground mb-5">Educational Connections</h3>
+                <div className="space-y-0 divide-y divide-border/40">
                   {[
                     { label: "Social Emotional Learning", desc: "students explore resilience, grief, and personal growth" },
                     { label: "Arts and Performance Education", desc: "dance as athletic training and discipline" },
                     { label: "Physical Education", desc: "balance, body awareness, and controlled movement" },
                     { label: "Character Development", desc: "how setbacks can lead to unexpected strengths" },
                   ].map((item) => (
-                    <div key={item.label}>
-                      <p className="text-sm font-bold text-foreground">{item.label}</p>
-                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    <div key={item.label} className="py-3 first:pt-0 last:pb-0">
+                      <p className="text-sm font-bold text-foreground leading-snug">{item.label}</p>
+                      <p className="text-sm text-muted-foreground mt-0.5">{item.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -739,17 +766,18 @@ export default function Home() {
             </div>
 
             {/* ── Reading Level + Perfect For (2-col) ── */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="bg-white rounded-2xl p-8 border border-border/60"
+                className="bg-white rounded-2xl p-8 border border-border/60 flex flex-col justify-center"
                 style={{ boxShadow: "var(--shadow-subtle)" }}
               >
-                <h3 className="text-xl font-serif font-bold text-foreground mb-3">Recommended Reading Level</h3>
-                <p className="text-4xl font-serif font-bold text-primary">Grades 6–10</p>
+                <h3 className="text-xl font-serif font-bold text-foreground mb-2">Recommended Reading Level</h3>
+                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-3">Middle Grade · Young Adult Crossover</p>
+                <p className="text-5xl font-serif font-bold text-primary leading-none">Grades 6–10</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -759,8 +787,8 @@ export default function Home() {
                 className="bg-white rounded-2xl p-8 border border-border/60"
                 style={{ boxShadow: "var(--shadow-subtle)" }}
               >
-                <h3 className="text-xl font-serif font-bold text-foreground mb-4">Perfect for readers who enjoy:</h3>
-                <ul className="space-y-1.5">
+                <h3 className="text-xl font-serif font-bold text-foreground mb-5">Perfect for readers who enjoy:</h3>
+                <ul className="space-y-2.5">
                   {[
                     "martial arts stories",
                     "sports-driven narratives",
@@ -778,7 +806,7 @@ export default function Home() {
             </div>
 
             {/* ── Divider ── */}
-            <div className="border-t border-border/50 mb-16" />
+            <div className="border-t border-border/40 mb-16" />
 
             {/* ── Chapter Preview ── */}
             <motion.div
@@ -788,42 +816,42 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="mb-16"
             >
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-8 text-center">Read the First Chapter</h3>
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-3 text-center">Read the First Chapter</h3>
+              <p className="text-muted-foreground text-center mb-10 text-sm tracking-wide uppercase font-semibold">Sample Excerpt</p>
               <div
-                className="bg-secondary/30 border border-border/60 rounded-2xl p-8 md:p-12 max-w-3xl mx-auto"
-                style={{ boxShadow: "var(--shadow-subtle)" }}
+                className="bg-[#fafaf8] border border-border/50 rounded-2xl px-8 py-10 md:px-14 md:py-12 max-w-2xl mx-auto relative"
+                style={{ boxShadow: "0 4px 40px -8px rgba(25,122,110,0.12), 0 2px 12px -4px rgba(0,0,0,0.08)" }}
               >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-0.5 flex-1 bg-primary/20 rounded" />
-                  <span className="text-primary font-bold text-xs tracking-widest uppercase">Chapter Excerpt</span>
-                  <div className="h-0.5 flex-1 bg-primary/20 rounded" />
-                </div>
-                <div className="space-y-4 text-foreground/85 leading-relaxed font-serif text-lg">
+                {/* Ornamental quote mark */}
+                <div className="text-primary/20 font-serif text-8xl leading-none select-none absolute top-4 left-8 md:left-12" aria-hidden="true">"</div>
+
+                <div className="space-y-5 text-foreground/80 font-serif text-lg leading-loose relative">
                   <p>Ever since he could remember, Xavier wanted to learn martial arts.</p>
-                  <p className="font-semibold">Not just learn it.</p>
-                  <p className="font-semibold">Master it.</p>
-                  <p>Karate. Kung fu. Judo. Taekwondo. Any of it.</p>
+                  <p className="font-semibold text-foreground">Not just learn it.</p>
+                  <p className="font-semibold text-foreground">Master it.</p>
+                  <p className="text-muted-foreground">Karate. Kung fu. Judo. Taekwondo. Any of it.</p>
                   <p>He studied the movements the way other kids studied video games. Every kick. Every block. Every stance.</p>
                   <p>His favorite move was the flying roundhouse kick.</p>
                   <p>Whenever he tried it, people always used the same two words.</p>
-                  <div className="flex gap-6 my-2">
-                    <span className="text-primary font-bold italic text-xl">Graceful.</span>
-                    <span className="text-primary font-bold italic text-xl">Powerful.</span>
+                  <div className="flex flex-col gap-1 pl-4 border-l-2 border-primary/30 my-2">
+                    <span className="text-primary font-bold italic text-xl tracking-wide">Graceful.</span>
+                    <span className="text-primary font-bold italic text-xl tracking-wide">Powerful.</span>
                   </div>
                   <p>Sometimes they added a third word when it landed just right.</p>
-                  <p className="text-primary font-bold italic text-xl">Nasty.</p>
+                  <p className="text-primary font-bold italic text-2xl tracking-wide">Nasty.</p>
                   <p>Xavier didn't mind that word.</p>
                   <p>To him, it meant progress.</p>
                   <p>But the real story of how he learned those movements was not what anyone expected.</p>
                   <p>Because Xavier never actually began his martial arts training in a dojo.</p>
                   <p>The training that shaped him started somewhere far more ordinary.</p>
-                  <p className="font-semibold text-foreground">A movie theater seat.</p>
-                  <p className="text-muted-foreground italic">Right next to his father.</p>
+                  <p className="font-semibold text-foreground text-xl">A movie theater seat.</p>
+                  <p className="italic text-muted-foreground">Right next to his father.</p>
                 </div>
-                <div className="flex items-center gap-3 mt-8">
-                  <div className="h-0.5 flex-1 bg-primary/20 rounded" />
-                  <span className="text-primary/50 text-xs tracking-widest uppercase font-semibold">End of Excerpt</span>
-                  <div className="h-0.5 flex-1 bg-primary/20 rounded" />
+
+                <div className="flex items-center gap-4 mt-10">
+                  <div className="h-px flex-1 bg-primary/15" />
+                  <span className="text-primary/40 text-xs tracking-widest uppercase font-semibold whitespace-nowrap">End of Excerpt</span>
+                  <div className="h-px flex-1 bg-primary/15" />
                 </div>
               </div>
             </motion.div>
@@ -834,12 +862,13 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="max-w-2xl mx-auto bg-foreground text-background rounded-2xl p-10 text-center"
+              className="max-w-2xl mx-auto bg-foreground text-background rounded-2xl p-10 md:p-12 text-center"
               style={{ boxShadow: "var(--shadow-elegant)" }}
             >
-              <h3 className="text-2xl font-serif font-bold mb-3">Bring This Story to Your Students</h3>
-              <p className="text-background/70 mb-6 leading-relaxed">Mind of Marq Publishing offers resources for:</p>
-              <ul className="text-left inline-block text-background/80 space-y-1.5 mb-8">
+              <GraduationCap className="w-10 h-10 text-primary mx-auto mb-5" />
+              <h3 className="text-2xl md:text-3xl font-serif font-bold mb-3">Bring This Story to Your Students</h3>
+              <p className="text-background/65 mb-7 leading-relaxed">Mind of Marq Publishing offers resources for:</p>
+              <ul className="text-left inline-block text-background/80 space-y-2 mb-8">
                 {[
                   "classroom discussion guides",
                   "SEL learning connections",
@@ -847,13 +876,13 @@ export default function Home() {
                   "author talks and visits",
                   "educator and library bulk orders",
                 ].map((item) => (
-                  <li key={item} className="flex gap-2 text-sm">
+                  <li key={item} className="flex gap-2.5 text-sm">
                     <ChevronRight className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
               </ul>
-              <p className="text-background/60 text-sm mb-8">Educators and librarians interested in introducing this story to their students can contact Mind of Marq Publishing through the website.</p>
+              <p className="text-background/50 text-sm mb-8 max-w-md mx-auto leading-relaxed">Educators and librarians interested in introducing this story to their students can contact Mind of Marq Publishing through the website.</p>
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2.5 bg-primary hover:bg-primary/90 text-white font-semibold px-9 py-4 rounded-full transition-colors text-base shadow-md hover:shadow-lg"
