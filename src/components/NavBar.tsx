@@ -7,7 +7,7 @@ const navLinks = [
   { name: "Publishing", href: "#publishing" },
   { name: "Storyworld", href: "#storyworld" },
   { name: "Books", href: "#books" },
-  { name: "Educators", href: "#educators" },
+  { name: "Educators", href: "/educators" },
   { name: "Libraries", href: "#libraries" },
   { name: "Partnerships", href: "#partnerships" },
   { name: "About", href: "#about" },
