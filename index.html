@@ -16,6 +16,10 @@
   </head>
   <body>
     <!-- Hidden form for Netlify Forms SPA detection -->
+    <form name="educator-request" netlify netlify-honeypot="bot-field" hidden>
+      <input name="name" /><input name="school" /><input name="role" />
+      <input name="email" /><select name="interest"></select><textarea name="message"></textarea>
+    </form>
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
       <input name="bot-field" />
       <input name="name" type="text" />
