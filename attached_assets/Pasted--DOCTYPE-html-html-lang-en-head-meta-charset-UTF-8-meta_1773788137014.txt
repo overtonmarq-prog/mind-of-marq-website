@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M.O.M. Kids Storyworld | Educator Page</title>
+  <style>
+    :root {
+      --navy: #162d57;
+      --blue: #3f5f96;
+      --cream: #f5f0e6;
+      --gold: #d8c28d;
+      --text: #1d2a3b;
+      --white: #ffffff;
+      --muted: #6c7787;
+      --border: #d9cfba;
+      --shadow: 0 10px 30px rgba(22, 45, 87, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(245, 240, 230, 0.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+
+    .brand h1 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+
+    .brand p {
+      color: var(--blue);
+      font-size: 0.95rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 11px 16px;
+      border-radius: 999px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      background: #ebe3d2;
+    }
+
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-cta:hover {
+      opacity: 0.94;
+    }
+
+    .hero {
+      padding: 74px 0 54px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .hero h2 {
+      font-size: clamp(2.4rem, 5vw, 4.9rem);
+      line-height: 0.95;
+      color: var(--navy);
+      margin-bottom: 24px;
+      max-width: 860px;
+    }
+
+    .hero p.lead {
+      font-size: 1.35rem;
+      color: #2e4363;
+      max-width: 760px;
+      margin-bottom: 14px;
+    }
+
+    .hero p.sublead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 30px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      opacity: 0.97;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+    }
+
+    .btn-secondary:hover {
+      background: #eee5d4;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .hero-point {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-point strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .hero-point span {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 {
+      color: var(--navy);
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+    }
+
+    .mini-label {
+      display: inline-block;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      background: #eef3fb;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .price-box {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+      margin: 16px 0 18px;
+    }
+
+    .price-box p {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 10px;
+      color: #33455f;
+    }
+
+    .price-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .price-box strong {
+      color: var(--navy);
+    }
+
+    .hero-card ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .hero-card li {
+      margin-bottom: 11px;
+      color: #415066;
+    }
+
+    section {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 32px;
+      font-size: 1.06rem;
+    }
+
+    .audience-grid,
+    .packs-grid,
+    .steps-grid,
+    .support-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .audience-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .packs-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .steps-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .support-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #edf2fa;
+      color: var(--blue);
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      color: var(--navy);
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 12px 0 14px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 0 0 18px;
+    }
+
+    .feature-list li {
+      margin-bottom: 10px;
+      color: #435065;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .cta-band {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 36px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-band h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .cta-band p {
+      max-width: 700px;
+      color: rgba(255,255,255,0.86);
+    }
+
+    .cta-band .btn-secondary {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.32);
+    }
+
+    .cta-band .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .form-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    form {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #cfc3ab;
+      border-radius: 14px;
+      padding: 14px 14px;
+      font-size: 1rem;
+      background: #fffdf8;
+      color: var(--text);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 10px;
+    }
+
+    footer {
+      padding: 30px 0 48px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .form-wrap,
+      .audience-grid,
+      .packs-grid,
+      .steps-grid,
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 48px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .cta-band {
+        padding: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-wrap">
+      <div class="brand">
+        <img src="https://via.placeholder.com/58x58.png?text=MOM" alt="M.O.M. Kids logo" />
+        <div>
+          <h1>M.O.M. Kids Storyworld</h1>
+          <p>M.O.M. Publishing</p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#packs">Classroom Packs</a>
+        <a href="#support">For Educators</a>
+        <a href="#request">Request Materials</a>
+        <a class="nav-cta" href="#request">Request Sample Materials</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">M.O.M. Kids Storyworld, STEM + SEL Learning Through Story</div>
+          <h2>Ready-to-use classroom stories that build focus, goal-setting, and student engagement</h2>
+          <p class="lead">
+            STEM + SEL read-aloud books for ages 6–8, designed for real classroom use.
+          </p>
+          <p class="sublead">
+            Story-driven books that support reading, discussion, persistence, and character growth. Built for classrooms, libraries, after-school programs, and school partnerships.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#request" class="btn btn-primary">Get Sample Materials</a>
+            <a href="#packs" class="btn btn-secondary">View Classroom Packs</a>
+            <a href="#request" class="btn btn-secondary">Schedule a Quick Call</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="hero-point">
+              <strong>Easy to use</strong>
+              <span>No training required, simple classroom fit.</span>
+            </div>
+            <div class="hero-point">
+              <strong>Built for engagement</strong>
+              <span>Supports focus, discussion, and participation.</span>
+            </div>
+            <div class="hero-point">
+              <strong>Flexible for schools</strong>
+              <span>Spanish option available upon request.</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <span class="mini-label">Fast decision offer</span>
+          <h3>Starter Classroom Pack</h3>
+          <p>Best first step for teachers, librarians, and school partners who want to test the books with students.</p>
+
+          <div class="price-box">
+            <p><span>15 books</span> <strong>$149</strong></p>
+            <p><span>25 books</span> <strong>$249</strong></p>
+            <p><span>50 books</span> <strong>$449</strong></p>
+          </div>
+
+          <ul>
+            <li>Includes bonus coloring pages</li>
+            <li>Optional virtual read-aloud</li>
+            <li>Spanish version available upon request</li>
+            <li>Ideal for classrooms, literacy tables, and library programming</li>
+          </ul>
+
+          <a href="#request" class="btn btn-primary" style="width:100%; text-align:center;">Request a Classroom Pack</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="audience">
+      <div class="container">
+        <h2 class="section-title">Designed for classrooms and libraries</h2>
+        <p class="section-subtitle">
+          These books are built to work across public schools, charter schools, private schools, libraries, and youth programs.
+        </p>
+
+        <div class="audience-grid">
+          <div class="card">
+            <span class="tag">Public Schools</span>
+            <h3>Simple classroom use</h3>
+            <p>Strong fit for read-aloud time, discussion blocks, literacy support, and student engagement.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Charter Schools</span>
+            <h3>Flexible and mission-friendly</h3>
+            <p>Great for schools that value strong storytelling, character development, and practical STEM + SEL tie-ins.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Libraries</span>
+            <h3>Storytime and youth programming</h3>
+            <p>Built for read-aloud sessions, themed programming, and family engagement events.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packs">
+      <div class="container">
+        <h2 class="section-title">Classroom packs built for fast approval</h2>
+        <p class="section-subtitle">
+          Keep the first yes simple. Start small, test the books, then expand by classroom, grade, or title.
+        </p>
+
+        <div class="packs-grid">
+          <div class="card">
+            <span class="tag">Starter Pack</span>
+            <h3>15 Books</h3>
+            <div class="price">$149</div>
+            <ul class="feature-list">
+              <li>Low-friction entry point</li>
+              <li>Bonus coloring pages included</li>
+              <li>Ideal for one classroom or pilot group</li>
+              <li>Fastest approval option</li>
+            </ul>
+            <a href="#request" class="btn btn-primary">Request This Pack</a>
+          </div>
+
+          <div class="card">
+            <span class="tag">Classroom Pack</span>
+            <h3>25 Books</h3>
+            <div class="price">$249</div>
+            <ul class="feature-list">
+              <li>Strong classroom set option</li>
+              <li>Bonus student materials included</li>
+              <li>Spanish version available upon request</li>
+              <li>Best fit for full-class use</li>
+            </ul>
+            <a href="#request" class="btn btn-primary">Request This Pack</a>
+          </div>
+
+          <div class="card">
+            <span class="tag">Grade Pack</span>
+            <h3>50 Books</h3>
+            <div class="price">$449</div>
+            <ul class="feature-list">
+              <li>For larger rollout or grade use</li>
+              <li>Priority author session scheduling</li>
+              <li>Better value per copy</li>
+              <li>Useful for events and literacy programs</li>
+            </ul>
+            <a href="#request" class="btn btn-primary">Request This Pack</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="container">
+        <h2 class="section-title">Why educators use M.O.M. Kids Storyworld</h2>
+        <p class="section-subtitle">
+          The books are positioned as story-first, while supporting STEM thinking, SEL discussion, and classroom engagement.
+        </p>
+
+        <div class="support-grid">
+          <div class="card">
+            <h3>Supports STEM + SEL naturally</h3>
+            <p>Students get story, reflection, and real learning value without the material feeling heavy or forced.</p>
+          </div>
+
+          <div class="card">
+            <h3>Works for all readers</h3>
+            <p>While we specialize in STEM and SEL, the stories also work for general read-aloud use, discussion, and independent interest.</p>
+          </div>
+
+          <div class="card">
+            <h3>Easy entry for school partners</h3>
+            <p>Simple pricing, clear packs, and low-friction sample requests make it easy for schools to say yes.</p>
+          </div>
+
+          <div class="card">
+            <h3>Built to grow with demand</h3>
+            <p>Start with two read-aloud titles now, then expand into Spanish support, coloring books, and older age bands later.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <h2 class="section-title">How it works</h2>
+        <p class="section-subtitle">
+          Keep the process clean. Remove confusion. Make it easy for educators to move.
+        </p>
+
+        <div class="steps-grid">
+          <div class="card">
+            <div class="step-number">1</div>
+            <h3>Choose a pack</h3>
+            <p>Start with the 15-book, 25-book, or 50-book option based on classroom size and use case.</p>
+          </div>
+
+          <div class="card">
+            <div class="step-number">2</div>
+            <h3>Request sample materials</h3>
+            <p>Preview the books, ask about Spanish support, and decide what fits your classroom or program.</p>
+          </div>
+
+          <div class="card">
+            <div class="step-number">3</div>
+            <h3>Use immediately</h3>
+            <p>Books and bonus materials are designed for practical use in class, library sessions, or school events.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h3>Bring story, STEM, and SEL into the room</h3>
+            <p>
+              Start with a classroom pack, request preview materials, or book a quick conversation to see what fits your students best.
+            </p>
+          </div>
+
+          <div class="hero-cta-row" style="margin-bottom:0;">
+            <a href="#request" class="btn btn-primary">Request Materials</a>
+            <a href="#request" class="btn btn-secondary">Schedule a Conversation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="request">
+      <div class="container form-wrap">
+        <div>
+          <h2 class="section-title">Request sample materials</h2>
+          <p class="section-subtitle">
+            Use this form for classroom packs, library interest, sample materials, author visit questions, or Spanish version requests.
+          </p>
+
+          <div class="card">
+            <h3>What to request</h3>
+            <ul class="feature-list">
+              <li>Preview materials for Percy and Brief</li>
+              <li>Starter, Classroom, or Grade Pack</li>
+              <li>Spanish version information</li>
+              <li>Author visit and read-aloud interest</li>
+              <li>Library and literacy event support</li>
+            </ul>
+          </div>
+        </div>
+
+        <form action="#" method="post">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="field">
+            <label for="school">School or Organization</label>
+            <input id="school" name="school" type="text" placeholder="School, library, or program name" required />
+          </div>
+
+          <div class="field">
+            <label for="role">Role</label>
+            <input id="role" name="role" type="text" placeholder="Teacher, principal, librarian, coordinator" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="name@school.org" required />
+          </div>
+
+          <div class="field">
+            <label for="interest">What are you interested in?</label>
+            <select id="interest" name="interest">
+              <option>Sample materials</option>
+              <option>15-book Starter Pack</option>
+              <option>25-book Classroom Pack</option>
+              <option>50-book Grade Pack</option>
+              <option>Spanish version</option>
+              <option>Author visit or read-aloud</option>
+              <option>Library programming</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what grade, program, or classroom need you have"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; cursor:pointer;">
+            Submit Request
+          </button>
+
+          <p class="small-note">
+            For live use in Replit, connect this form to Formspree, Basin, Airtable, Google Forms, or your own backend.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      M.O.M. Kids Storyworld, STEM + SEL learning through story for classrooms, libraries, and school partners.
+    </div>
+  </footer>
+</body>
+</html>
