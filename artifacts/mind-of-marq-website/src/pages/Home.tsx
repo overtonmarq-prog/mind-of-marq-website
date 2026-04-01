@@ -90,7 +90,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-foreground mb-5 leading-[1.05]"
               >
-                The Mind of Marq
+                M.O.M. Kids StoryWorld
               </motion.h1>
 
               <motion.h2
@@ -99,7 +99,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-xl md:text-2xl lg:text-3xl text-primary font-serif italic mb-8"
               >
-                Home of Mind of Marq Publishing
+                Home of M.O.M. Kids StoryWorld
               </motion.h2>
 
               <motion.p
@@ -109,8 +109,7 @@ export default function Home() {
                 className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto text-balance leading-relaxed"
               >
                 A connected home for books, storyworlds, educational experiences, and original creative
-                properties. Explore Mind of Marq Publishing and discover M.O.M. Kids Storyworld, where
-                STEM + SEL learning grows through story.
+                properties. Where STEM + SEL learning grows through story.
               </motion.p>
 
               <motion.div
@@ -151,9 +150,9 @@ export default function Home() {
             <div className="container mx-auto px-4 md:px-6">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pb-10 pt-4">
                 {[
-                  { label: "Website", name: "The Mind of Marq" },
-                  { label: "Publishing Imprint", name: "Mind of Marq Publishing" },
-                  { label: "Featured Division", name: "M.O.M. Kids Storyworld", sub: "STEM + SEL Learning Through Story" },
+                  { label: "Brand", name: "M.O.M. Kids StoryWorld" },
+                  { label: "For", name: "Young Readers · Classrooms · Libraries" },
+                  { label: "Mission", name: "STEM + SEL Learning Through Story" },
                 ].map((card, i) => (
                   <motion.div
                     key={i}
@@ -178,19 +177,19 @@ export default function Home() {
           <div className="container mx-auto px-4 md:px-6">
             <SectionHeading
               title="One brand, multiple worlds"
-              subtitle="Mind of Marq Publishing is designed to house children's books, educational platforms, story-driven intellectual property, and future media expansions under one clear parent brand."
+              subtitle="M.O.M. Kids StoryWorld is designed to house children's books, educational platforms, story-driven intellectual property, and future media expansions under one clear parent brand."
             />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
               {[
                 {
                   icon: <BookOpen className="w-10 h-10 text-primary mb-6" />,
-                  title: "Mind of Marq Publishing",
+                  title: "M.O.M. Kids StoryWorld",
                   desc: "The publishing imprint for books, story properties, educational platforms, and future long-form creative works.",
                 },
                 {
                   icon: <GraduationCap className="w-10 h-10 text-primary mb-6" />,
-                  title: "M.O.M. Kids Storyworld",
+                  title: "M.O.M. Kids StoryWorld",
                   desc: "A STEM + SEL learning platform built around character-driven stories, educator value, and library-friendly programming.",
                 },
                 {
@@ -227,7 +226,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight"
             >
-              The Mind of Marq Storyworld
+              M.O.M. Kids StoryWorld
             </motion.h2>
 
             <motion.p
@@ -299,7 +298,7 @@ export default function Home() {
                     Platform Overview
                   </span>
                   <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-5 leading-tight">
-                    M.O.M. Kids Storyworld
+                    M.O.M. Kids StoryWorld
                   </h2>
                   <h3 className="text-2xl text-foreground/80 font-serif italic mb-6">
                     STEM + SEL Learning Through Story
@@ -446,7 +445,7 @@ export default function Home() {
               <GraduationCap className="w-10 h-10 text-primary mx-auto mb-5" />
               <h3 className="text-2xl font-serif font-bold text-foreground mb-3">Sample Classroom Kit</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Teachers can explore how Mind of Marq stories support STEM curiosity and social emotional learning in real classrooms.
+                Teachers can explore how M.O.M. Kids StoryWorld stories support STEM curiosity and social emotional learning in real classrooms.
               </p>
               <a
                 href="/Educator_Starter_Kit_MOM_Kids.html"
@@ -867,7 +866,7 @@ export default function Home() {
             >
               <GraduationCap className="w-10 h-10 text-primary mx-auto mb-5" />
               <h3 className="text-2xl md:text-3xl font-serif font-bold mb-3">Bring This Story to Your Students</h3>
-              <p className="text-background/65 mb-7 leading-relaxed">Mind of Marq Publishing offers resources for:</p>
+              <p className="text-background/65 mb-7 leading-relaxed">M.O.M. Kids StoryWorld offers resources for:</p>
               <ul className="text-left inline-block text-background/80 space-y-2 mb-8">
                 {[
                   "classroom discussion guides",
@@ -882,7 +881,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <p className="text-background/50 text-sm mb-8 max-w-md mx-auto leading-relaxed">Educators and librarians interested in introducing this story to their students can contact Mind of Marq Publishing through the website.</p>
+              <p className="text-background/50 text-sm mb-8 max-w-md mx-auto leading-relaxed">Educators and librarians interested in introducing this story to their students can contact M.O.M. Kids StoryWorld through the website.</p>
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2.5 bg-primary hover:bg-primary/90 text-white font-semibold px-9 py-4 rounded-full transition-colors text-base shadow-md hover:shadow-lg"
@@ -934,7 +933,7 @@ export default function Home() {
                 <div className="border-t border-border pt-6 relative">
                   <h4 className="font-bold text-xl mb-3 font-serif">Built for classroom value</h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    M.O.M. Kids Storyworld titles are designed to help students engage with science ideas,
+                    M.O.M. Kids StoryWorld titles are designed to help students engage with science ideas,
                     emotional development, and character-based learning in ways that feel natural,
                     memorable, and discussion-ready.
                   </p>
@@ -988,11 +987,11 @@ export default function Home() {
         {/* ─── PARTNERSHIPS ────────────────────────────────────────────── */}
         <section id="partnerships" className="py-24 bg-white">
           <div className="container mx-auto px-4 md:px-6">
-            <SectionHeading title="Building the Mind of Marq Storyworld" />
+            <SectionHeading title="Building the M.O.M. Kids StoryWorld" />
 
             <div className="max-w-4xl mx-auto mb-20 text-center space-y-6">
               <p className="text-xl text-foreground font-medium leading-relaxed">
-                The Mind of Marq is an independent storytelling studio developing original intellectual
+                M.O.M. Kids StoryWorld is an independent storytelling studio developing original intellectual
                 property across books, education, stage, and film.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -1000,7 +999,7 @@ export default function Home() {
                 in young audiences while delivering powerful entertainment for families worldwide.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                The Mind of Marq ecosystem is designed to grow through strategic partnerships with
+                M.O.M. Kids StoryWorld ecosystem is designed to grow through strategic partnerships with
                 educators, creative studios, and forward-thinking investors who believe storytelling can
                 shape the next generation.
               </p>
@@ -1038,7 +1037,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                   <div className="lg:col-span-1">
                     <p className="text-lg mb-5 text-foreground/80 leading-relaxed">
-                      Mind of Marq Kids titles are being developed for educational stage adaptations designed
+                      M.O.M. Kids StoryWorld titles are being developed for educational stage adaptations designed
                       for school theater programs.
                     </p>
                     <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -1117,15 +1116,15 @@ export default function Home() {
                   <Clapperboard size={32} />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-serif font-bold">Mind of Marq Kids Film Division</h3>
+                  <h3 className="text-3xl font-serif font-bold">M.O.M. Kids StoryWorld Film Division</h3>
                   <p className="text-muted-foreground mt-1">Animation &amp; Feature Development</p>
                 </div>
               </div>
 
               <div className="mb-10">
                 <p className="text-lg max-w-3xl text-foreground/80 mb-6 leading-relaxed">
-                  The Mind of Marq Kids Film Division is exploring partnerships to develop animated films and
-                  visual storytelling projects based on the Mind of Marq Kids library. These projects combine
+                  The M.O.M. Kids StoryWorld Film Division is exploring partnerships to develop animated films and
+                  visual storytelling projects based on the M.O.M. Kids StoryWorld library. These projects combine
                   heart, humor, and meaningful life lessons with cinematic storytelling designed for global
                   family audiences.
                 </p>
@@ -1288,7 +1287,7 @@ export default function Home() {
               </motion.div>
 
               <div className="order-1 lg:order-2 lg:pl-8">
-                <SectionHeading title="About The Mind of Marq" alignment="left" />
+                <SectionHeading title="About M.O.M. Kids StoryWorld" alignment="left" />
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1296,20 +1295,19 @@ export default function Home() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
                   <p className="text-xl text-foreground font-medium leading-relaxed mb-6">
-                    The Mind of Marq is an independent storytelling brand built around the belief that great
+                    M.O.M. Kids StoryWorld is an independent storytelling brand built around the belief that great
                     stories can inspire courage, curiosity, and transformation in young audiences.
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-8">
-                    Through Mind of Marq Publishing, M.O.M. Kids Storyworld, and a growing slate of original
-                    creative properties, we are building a connected storytelling universe designed to
-                    educate, entertain, and endure.
+                    Through M.O.M. Kids StoryWorld and a growing slate of original creative properties,
+                    we are building a connected storytelling universe designed to educate, entertain, and endure.
                   </p>
 
                   <div
                     className="p-6 bg-white rounded-2xl border border-border italic text-foreground font-serif text-lg leading-relaxed"
                     style={{ boxShadow: "var(--shadow-subtle)" }}
                   >
-                    "Mind of Marq Kids is an educational storytelling brand expanding from books into
+                    "M.O.M. Kids StoryWorld is an educational storytelling brand expanding from books into
                     classrooms, stage productions, and film development."
                   </div>
                 </motion.div>
@@ -1341,11 +1339,11 @@ export default function Home() {
                 <div className="relative mt-12 space-y-5">
                   <div className="flex items-center gap-4 opacity-85">
                     <BookOpen size={22} />
-                    <span className="font-medium">Mind of Marq Publishing</span>
+                    <span className="font-medium">M.O.M. Kids StoryWorld</span>
                   </div>
                   <div className="flex items-center gap-4 opacity-85">
                     <GraduationCap size={22} />
-                    <span className="font-medium">M.O.M. Kids Storyworld</span>
+                    <span className="font-medium">M.O.M. Kids StoryWorld</span>
                   </div>
                 </div>
               </div>

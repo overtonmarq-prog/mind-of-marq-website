@@ -61,7 +61,7 @@ export default function Educators() {
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <motion.div {...fadeUp} className="text-center max-w-4xl mx-auto mb-16">
             <span className="text-primary font-bold tracking-wider uppercase text-sm mb-5 block">
-              Mind of Marq Publishing
+              M.O.M. Kids StoryWorld
             </span>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground leading-tight mb-6">
               M.O.M. Kids<br />

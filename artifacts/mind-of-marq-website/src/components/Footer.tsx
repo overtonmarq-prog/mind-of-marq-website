@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
           <div className="lg:col-span-2">
-            <h2 className="font-serif text-2xl font-bold text-primary mb-4">The Mind of Marq</h2>
+            <h2 className="font-serif text-2xl font-bold text-primary mb-4">M.O.M. Kids StoryWorld</h2>
             <p className="text-background/70 max-w-sm">
               An independent storytelling brand developing original intellectual property across books, education, stage, and film.
             </p>
@@ -15,8 +15,7 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4 text-background">Divisions</h3>
             <ul className="space-y-2 text-background/70 text-sm">
-              <li>Mind of Marq Publishing</li>
-              <li>M.O.M. Kids Storyworld</li>
+              <li>M.O.M. Kids StoryWorld</li>
               <li>Stories, Stage, and Screen</li>
             </ul>
           </div>
@@ -35,11 +34,11 @@ export function Footer() {
         </div>
         
         <div className="pt-8 border-t border-background/20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/50">
-          <p>&copy; {currentYear} The Mind of Marq. All rights reserved.</p>
+          <p>&copy; {currentYear} M.O.M. Kids StoryWorld. All rights reserved.</p>
           <div className="flex gap-4">
-            <span>Mind of Marq Publishing</span>
+            <span>M.O.M. Kids StoryWorld</span>
             <span>|</span>
-            <span>M.O.M. Kids Storyworld</span>
+            <span>M.O.M. Kids StoryWorld</span>
           </div>
         </div>
       </div>
