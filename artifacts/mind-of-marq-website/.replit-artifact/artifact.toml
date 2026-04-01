@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "The Mind of Marq"
+title = "M.O.M. Kids StoryWorld"
 version = "1.0.0"
 id = "artifacts/mind-of-marq-website"
 router = "path"
