@@ -1,0 +1,139 @@
+Please restructure my homepage for M.O.M. Kids StoryWorld.
+
+This is a product-focused educational publisher and Storyworld Learning System for ages 3 to 12.
+
+Brand position:
+M.O.M. Kids StoryWorld combines books, stage play adaptations, and classroom-friendly learning experiences. The focus is STEM, SEL, literacy, performance, and emotional growth.
+
+Target audiences:
+Parents, educators, schools, enrichment programs, and grant-minded partners.
+
+Main objective:
+Transform the homepage from a brand-intro layout into a high-converting, product-focused educational homepage that clearly explains the system, age tiers, products, and school value.
+
+Important copy rule:
+Use the brand name strongly once in the hero. Do not keep repeating M.O.M. Kids StoryWorld throughout the page. After the hero, use value-based copy, product language, and school-focused messaging.
+
+Homepage sections to build:
+
+1. Hero
+Headline:
+M.O.M. Kids StoryWorld
+
+Subheadline:
+A Storyworld Learning System for Ages 3 to 12
+
+Support copy:
+Books, stage plays, and story-based learning experiences that build STEM thinking, communication, and emotional growth.
+
+Buttons:
+Explore the System
+For Schools
+
+2. System Overview
+Four-column band with icons and short copy:
+Read, Build literacy through story
+Imagine, Develop curiosity and creative thinking
+Perform, Bring stories to life through stage and participation
+Apply, Turn learning into expression and growth
+
+3. Age Pathway
+Visually dynamic layout, not three identical cards.
+Three tiers:
+Ages 3 to 5, Discovery Tier
+Ages 6 to 8, Read-Aloud Tier
+Ages 9 to 12, Deeper Learning Tier
+
+Each tier should show:
+Age range
+Format
+Educational focus
+Example product type
+
+4. Featured Products
+Editorial-style layout with hierarchy.
+Feature:
+Percy’s First New Year’s Resolution
+The Brief but Spectacular Lives of Caterpillars
+Stage Play Adaptations
+
+Each should include short copy and CTA.
+
+5. Stage Experience
+Split layout.
+Focus on:
+Story to stage
+Student participation
+Classroom enrichment
+Reading through performance
+School play activity use
+
+6. Schools and Partnerships
+Contrasting background.
+Headline:
+Built for Classrooms, Programs, and School Partnerships
+
+Highlight:
+STEM + SEL alignment
+Age-banded pathways
+Literacy and communication support
+Story and stage integration
+
+CTA:
+Bring M.O.M. Kids to Your School
+
+7. Mission Section
+Short, warm, intentional.
+Focus on why the system exists and what it helps children become.
+
+8. Footer CTA
+Three paths:
+Explore Books
+Explore Stage Plays
+Contact for Schools
+
+Navigation:
+Home
+Storyworld System
+Books
+Stage Plays
+For Schools
+About
+Contact
+
+Design direction:
+Premium, clean, modern, warm, educational, polished.
+Use varied layouts across the homepage:
+Centered hero
+Full-width system band
+Dynamic age-path section
+Editorial-style product section
+Split layout for stage experience
+Contrasting school section
+Strong footer CTA
+
+Design rules:
+Do not use the same card style in every section.
+Use subtle background variation between sections.
+Use strong spacing and visual hierarchy.
+Keep typography elegant and readable.
+Make the site feel like a premium educational platform.
+
+Technical requirements:
+Refactor into modular reusable components.
+Make it responsive for desktop, tablet, and mobile.
+Keep performance fast.
+Use clean code and scalable structure.
+
+Component structure:
+Hero
+SystemOverview
+AgePathway
+FeaturedProducts
+StageExperience
+SchoolsPartnerships
+MissionBlock
+FooterCTA
+
+Final result:
+The homepage should feel like a premium educational publishing and learning platform, not a generic brand landing page.
