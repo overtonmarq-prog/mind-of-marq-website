@@ -1,0 +1,65 @@
+Update the Percy book cover image across the website.
+
+OBJECTIVE
+The current Percy cover image on the website is not the correct one.
+Replace it everywhere with the new approved image.
+
+NEW APPROVED FILE
+Use this file:
+ /mnt/data/Percy'sFirstNewYear'sResolution.png
+
+BOOK TITLE
+Percy’s First New Year’s Resolution
+
+REQUIRED ACTIONS
+Find every place on the site where Percy’s First New Year’s Resolution appears and replace the current image with the new approved file.
+
+Check all likely locations, including:
+- homepage featured books
+- catalog or library section
+- product cards
+- sliders or carousels
+- book detail pages
+- any school or educator pages
+- any featured product or hero section using Percy
+
+IF THE PROJECT NEEDS A CLEANER ASSET PATH
+Move the image into the proper public assets folder, for example:
+ /public/images/books/
+
+Rename it cleanly if needed:
+ percy-first-new-years-resolution-cover.png
+
+Then update all references to the new path.
+
+DISPLAY RULES
+- Do not crop off the title
+- Do not crop off Percy’s face, scarf, or aviator goggles
+- Preserve full cover visibility as much as possible
+- Use object-fit: contain where appropriate
+- Keep proportions natural
+- Do not stretch or zoom the image
+- Make sure the cover still looks polished on desktop and mobile
+
+ALT TEXT
+Set alt text to:
+ Percy’s First New Year’s Resolution cover by Marq Overton
+
+TITLE LABEL
+Make sure the site display name is exactly:
+ Percy’s First New Year’s Resolution
+
+QUALITY CHECK
+After updating:
+1. confirm the old Percy image is gone everywhere
+2. confirm the new image loads correctly
+3. confirm the title is readable in the cover
+4. confirm no layout breaks on mobile
+5. confirm the Percy card still aligns visually with the other books
+
+FINAL REPORT
+Tell me:
+1. which files you changed
+2. the final image path now being used
+3. every section or page where Percy was updated
+4. whether you had to adjust spacing or card styling to fit the new cover cleanly
