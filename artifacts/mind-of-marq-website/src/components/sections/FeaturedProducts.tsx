@@ -30,7 +30,7 @@ export function FeaturedProducts() {
             <div className="sm:w-52 lg:w-60 flex-shrink-0 flex items-stretch overflow-hidden">
               <div className="relative w-full aspect-[3/4] sm:aspect-auto sm:h-full overflow-hidden">
                 <img
-                  src={`${baseUrl}images/books/percy-cover.png`}
+                  src={`${baseUrl}images/books/percy-first-new-years-resolution-cover.png`}
                   alt="Percy's First New Year's Resolution cover by Marq Overton"
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover object-right"
