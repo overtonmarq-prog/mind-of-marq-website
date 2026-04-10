@@ -7,6 +7,7 @@ import { FeaturedProducts } from "@/components/sections/FeaturedProducts";
 import { StageExperience } from "@/components/sections/StageExperience";
 import { SchoolsPartnerships } from "@/components/sections/SchoolsPartnerships";
 import { MissionBlock } from "@/components/sections/MissionBlock";
+import { PartnerCallout } from "@/components/sections/PartnerCallout";
 import { FooterCTA } from "@/components/sections/FooterCTA";
 import { ContactSection } from "@/components/sections/ContactSection";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <StageExperience />
         <SchoolsPartnerships />
         <MissionBlock />
+        <PartnerCallout />
         <FooterCTA />
         <ContactSection />
       </main>

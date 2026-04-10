@@ -69,15 +69,25 @@ export function SchoolsPartnerships() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Button
-              size="lg"
-              className="rounded-full px-10 h-14 text-base bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
-              asChild
-            >
-              <a href="/educators">Bring M.O.M. Kids to Your School</a>
-            </Button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button
+                size="lg"
+                className="rounded-full px-10 h-14 text-base bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
+                asChild
+              >
+                <a href="/educators">Bring M.O.M. Kids to Your School</a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-10 h-14 text-base border-white/20 text-white hover:bg-white/10"
+                asChild
+              >
+                <a href="/partners">Explore Funded Partnerships</a>
+              </Button>
+            </div>
             <p className="text-white/30 text-sm mt-4">
-              Classroom packs · Educator guides · Partnership inquiries
+              Classroom packs · Educator guides · Grant-funded access
             </p>
           </motion.div>
         </div>

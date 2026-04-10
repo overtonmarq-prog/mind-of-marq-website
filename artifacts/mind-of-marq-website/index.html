@@ -15,17 +15,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <!-- Hidden form for Netlify Forms SPA detection -->
-    <form name="educator-request" netlify netlify-honeypot="bot-field" hidden>
-      <input name="name" /><input name="school" /><input name="role" />
-      <input name="email" /><select name="interest"></select><textarea name="message"></textarea>
-    </form>
+    <!-- Hidden forms for Netlify Forms SPA detection -->
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
       <input name="bot-field" />
       <input name="name" type="text" />
       <input name="email" type="email" />
       <input name="subject" type="text" />
       <textarea name="message"></textarea>
+    </form>
+    <form name="educator-request" netlify netlify-honeypot="bot-field" hidden>
+      <input name="name" /><input name="school" /><input name="role" />
+      <input name="email" /><select name="interest"></select><textarea name="message"></textarea>
+    </form>
+    <form name="partner-inquiry" netlify netlify-honeypot="bot-field" hidden>
+      <input name="fullName" />
+      <input name="orgName" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <select name="orgType"></select>
+      <select name="ageGroup"></select>
+      <input name="numChildren" />
+      <input name="cityState" />
+      <textarea name="description"></textarea>
+      <input name="interests" />
     </form>
 
     <div id="root"></div>

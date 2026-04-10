@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Books", href: "#books" },
   { name: "Stage Plays", href: "#stage" },
   { name: "For Schools", href: "/educators" },
+  { name: "Partner With Us", href: "/partners" },
   { name: "About", href: "#about" },
 ];
 
@@ -45,7 +46,11 @@ export function NavBar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-foreground/75 hover:text-primary transition-colors"
+                className={`text-sm font-medium transition-colors ${
+                  link.name === "Partner With Us"
+                    ? "text-primary hover:text-primary/80"
+                    : "text-foreground/75 hover:text-primary"
+                }`}
               >
                 {link.name}
               </a>
@@ -78,7 +83,11 @@ export function NavBar() {
               key={link.name}
               href={link.href}
               onClick={closeMenu}
-              className="text-2xl font-serif text-foreground hover:text-primary transition-colors"
+              className={`text-2xl font-serif transition-colors ${
+                link.name === "Partner With Us"
+                  ? "text-primary"
+                  : "text-foreground hover:text-primary"
+              }`}
             >
               {link.name}
             </a>
