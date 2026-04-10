@@ -1,0 +1,215 @@
+Add a new website section and page for funded partnerships without disrupting book sales.
+
+OBJECTIVE
+Create a clean, professional partner pathway for schools, nonprofits, youth programs, sponsors, and agencies that may want to bring M.O.M. Kids StoryWorld in through grants, sponsorships, or funded partnerships.
+
+IMPORTANT STRATEGY
+This must NOT feel like a donation request.
+It must feel like a serious institutional opportunity.
+
+We are not asking visitors to support us.
+We are offering organizations a way to access books and programming through possible outside funding.
+
+PRIMARY GOAL
+Add:
+1. a new top navigation link
+2. a homepage callout section
+3. a full dedicated partner page
+4. a simple lead form
+
+NAVIGATION
+Add a header nav item:
+Partner With Us
+
+Route:
+ /partners
+
+Also add this same link to the footer.
+
+HOMEPAGE SECTION
+Add one clean section on the homepage, lower than the main sales content but still visible.
+
+Headline:
+Bring M.O.M. Kids StoryWorld to Your School or Organization
+
+Body copy:
+Educators, youth programs, nonprofits, and community partners can explore funded partnership opportunities to bring our books and StoryWorld learning system to children at little or no direct cost.
+
+Primary button:
+Apply for a Funded Partnership
+
+Secondary button:
+Learn More
+
+Both buttons should link to:
+ /partners
+
+DESIGN NOTES FOR HOMEPAGE CALLOUT
+- Keep it elegant and compact
+- It should feel like an opportunity, not a plea
+- Preserve the sales-first flow of the homepage
+- Do not make it louder than the book buying sections
+- Keep spacing generous
+- Make it look premium and aligned with the site brand
+
+DEDICATED PAGE
+Create page:
+ /partners
+
+Page title:
+Partner With M.O.M. Kids StoryWorld
+
+META DESCRIPTION
+Use:
+Explore funded partnership opportunities with M.O.M. Kids StoryWorld for schools, nonprofits, youth programs, and community organizations.
+
+PAGE STRUCTURE
+
+SECTION 1, HERO
+Headline:
+Fund Literacy, STEM, and Emotional Growth Through Story
+
+Subheadline:
+M.O.M. Kids StoryWorld partners with schools, youth programs, nonprofits, and community organizations to help bring engaging children’s books and learning experiences to young readers through grants, sponsorships, and funded partnerships.
+
+Buttons:
+- Apply for a Funded Partnership
+- Schedule a Conversation
+
+For now:
+- “Apply for a Funded Partnership” should scroll to the form
+- “Schedule a Conversation” can link to a contact email or contact section if one exists
+
+SECTION 2, WHO THIS IS FOR
+Headline:
+Who We Partner With
+
+Use cards or a neat grid for:
+- Elementary Schools
+- Charter Schools
+- Daycare and Early Learning Centers
+- Libraries
+- Afterschool and Youth Programs
+- Nonprofits
+- Foundations
+- Corporate Community Partners
+
+SECTION 3, WHAT PARTNERS RECEIVE
+Headline:
+What a Funded Partnership Can Include
+
+Use a clean icon grid or stacked cards:
+- Book sets for ages 3–5, 6–8, and 9–12
+- STEM + SEL aligned storytelling
+- Read-aloud and interactive formats
+- Early learning coloring integration
+- Optional classroom or group activity extensions
+- StoryWorld-based literacy enrichment
+
+SECTION 4, HOW IT WORKS
+Headline:
+How the Process Works
+
+Use a simple 4-step visual layout:
+1. Tell us about your organization
+2. We review your goals and audience
+3. We explore funding or sponsorship alignment
+4. If approved, we coordinate delivery and rollout
+
+Keep wording simple and clear.
+
+SECTION 5, WHY M.O.M. KIDS STORYWORLD
+Headline:
+Why M.O.M. Kids StoryWorld
+
+Body copy:
+M.O.M. Kids StoryWorld is more than a collection of books. It is a children’s learning system built to support literacy, imagination, STEM curiosity, and social-emotional growth across multiple age groups.
+
+Add 4 short highlight blocks:
+- Multi-tier learning path, ages 3–12
+- Story-driven STEM + SEL approach
+- Built for classrooms, libraries, and youth spaces
+- Designed for active engagement, not passive reading
+
+SECTION 6, OPEN APPEAL CTA
+Headline:
+Interested in Partnering With Us?
+
+Body copy:
+If your school, agency, foundation, nonprofit, or community program is interested in exploring a funded partnership with M.O.M. Kids StoryWorld, we invite you to connect with us.
+
+Add a short line beneath:
+Possible partnerships may include grants, sponsorships, literacy support, youth programming support, or community-funded book access.
+
+SECTION 7, APPLICATION FORM
+Headline:
+Apply for a Funded Partnership
+
+Create a clean, professional form with these fields:
+- Full Name
+- Organization Name
+- Email Address
+- Phone Number, optional
+- Organization Type, dropdown
+- Age Group Served, dropdown or checkboxes
+- Number of Children Served
+- City and State
+- Brief Description of Need
+- Interested In, checkboxes:
+  - Book Sets
+  - Literacy Program Support
+  - STEM + SEL Enrichment
+  - Sponsorship Opportunity
+  - Grant-Aligned Partnership
+  - School or Community Event
+- Submit button text:
+  Submit Partnership Inquiry
+
+FORM BEHAVIOR
+If a backend form handler already exists, wire it in.
+If not, connect it to the site’s current contact pipeline or email capture flow.
+If none exists, create a basic working form submission solution consistent with the project setup.
+
+SUCCESS MESSAGE
+Use:
+Thank you. We received your partnership inquiry and will follow up soon.
+
+STYLE RULES
+- Keep the design clean, warm, and professional
+- This page should feel institution-ready
+- Do not use language that sounds needy
+- Do not use “donate,” “support us,” or “help fund us”
+- Use opportunity language, partnership language, and program language
+- Keep typography consistent with the current brand site
+- Maintain strong mobile responsiveness
+- Keep spacing premium and uncluttered
+
+SALES PROTECTION
+This new partner area must not disrupt direct sales.
+Make sure:
+- book shopping and product discovery still remain primary on the homepage
+- this new section is supportive, not dominant
+- buying books and partnership inquiries are clearly separate user paths
+
+OPTIONAL SMALL IMPROVEMENT
+If there is a homepage section for schools, libraries, or educational value, lightly cross-link it to /partners where appropriate.
+
+ACCESSIBILITY
+Add proper labels to all form fields.
+Use semantic headings.
+Ensure buttons and links are keyboard accessible.
+
+SEO
+Add basic SEO for /partners:
+Title tag:
+Partner With M.O.M. Kids StoryWorld
+
+Meta description:
+Explore funded partnership opportunities with M.O.M. Kids StoryWorld for schools, nonprofits, youth programs, and community organizations.
+
+FINAL REPORT
+After implementation, tell me:
+1. which files were created or updated
+2. the exact route added
+3. how the form is currently connected
+4. any design adjustments made to keep the homepage balanced
