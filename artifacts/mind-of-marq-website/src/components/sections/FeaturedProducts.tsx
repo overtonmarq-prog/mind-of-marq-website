@@ -24,21 +24,20 @@ export function FeaturedProducts() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="lg:col-span-7 rounded-3xl overflow-hidden bg-[hsl(220,40%,12%)] border border-border/30 flex flex-col sm:flex-row"
+            className="lg:col-span-7 rounded-3xl overflow-hidden bg-[hsl(220,40%,12%)] border border-border/30 flex flex-col"
           >
-            {/* Cover — show front-only from the full spread via object-position:right */}
-            <div className="sm:w-52 lg:w-60 flex-shrink-0 flex items-stretch overflow-hidden">
-              <div className="relative w-full aspect-[3/4] sm:aspect-auto sm:h-full overflow-hidden">
-                <img
-                  src={`${baseUrl}images/books/percy-first-new-years-resolution-cover.png`}
-                  alt="Percy's First New Year's Resolution cover by Marq Overton"
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover object-right"
-                />
-              </div>
+            {/* Cover — full-width at top; aspect-[3/2] matches the actual spread ratio */}
+            <div className="w-full bg-[hsl(220,40%,9%)] flex items-center justify-center p-4 sm:p-6">
+              <img
+                src={`${baseUrl}images/books/percy-first-new-years-resolution-cover.png`}
+                alt="Percy's First New Year's Resolution cover by Marq Overton"
+                loading="lazy"
+                className="w-full rounded-xl object-contain"
+                style={{ maxHeight: "340px", objectFit: "contain" }}
+              />
             </div>
 
-            <div className="flex-1 p-8 flex flex-col justify-between">
+            <div className="p-8 flex flex-col justify-between flex-1">
               <div>
                 <span className="inline-block text-xs font-bold uppercase tracking-wider bg-white/15 text-white px-3 py-1 rounded-full mb-4">
                   Ages 6–8 · Featured

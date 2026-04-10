@@ -131,7 +131,7 @@ export default function Educators() {
           </motion.div>
 
           {/* Percy */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-16 mb-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 mb-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -139,10 +139,15 @@ export default function Educators() {
               transition={{ duration: 0.65 }}
               className="flex justify-center"
             >
-              <div className="relative max-w-[300px] w-full">
+              <div className="relative w-full">
                 <div className="absolute -inset-3 rounded-3xl bg-primary/8 -z-10" />
                 <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "0 20px 50px -10px rgba(25,122,110,0.22), 0 8px 24px -4px rgba(0,0,0,0.12)" }}>
-                  <img src="/images/books/percy-first-new-years-resolution-cover.png" alt="Percy's First New Year's Resolution cover by Marq Overton" loading="lazy" className="w-full h-auto object-cover object-right block" style={{ aspectRatio: "3/4" }} />
+                  <img
+                    src="/images/books/percy-first-new-years-resolution-cover.png"
+                    alt="Percy's First New Year's Resolution cover by Marq Overton"
+                    loading="lazy"
+                    className="w-full h-auto block"
+                  />
                 </div>
               </div>
             </motion.div>
