@@ -1,0 +1,104 @@
+Update the brand website so the featured book cover images reflect the newest covers for these three titles:
+
+1. The Brief but Spectacular Lives of Caterpillars, 6–8 Read-Aloud Hybrid
+2. Percy’s First New Year’s Resolution
+3. Las breves pero espectaculares vidas de las orugas, Spanish edition
+
+GOAL
+Replace the current cover images anywhere these books appear on the site, including:
+- homepage featured books
+- catalog or shop sections
+- product cards
+- sliders or carousels
+- book detail pages
+- any “coming soon” or “featured titles” sections
+
+NEW IMAGE FILES
+Use these image files:
+- /mnt/data/BriefCover.jpg
+- /mnt/data/Cover-PercyPercy(1).png
+- /mnt/data/Briefcoverkids.png
+
+TITLE TO FILE MATCHING
+Match them like this:
+- The Brief but Spectacular Lives of Caterpillars, 6–8 Read-Aloud Hybrid = /mnt/data/BriefCover.jpg
+- Percy’s First New Year’s Resolution = /mnt/data/Cover-PercyPercy(1).png
+- Las breves pero espectaculares vidas de las orugas, Spanish edition = /mnt/data/Briefcoverkids.png
+
+IMPORTANT
+- Do not crop off key title text or author name
+- Preserve full cover visibility as much as possible
+- Use object-fit: contain, not cover, unless a section absolutely requires a different approach
+- Keep image proportions natural
+- Make all three book cards feel visually aligned even though the covers have different color palettes
+- Maintain clean premium spacing around each cover
+- Avoid stretching, zooming, or awkward clipping
+
+DESIGN DIRECTION
+- These are children’s books under the M.O.M. Kids StoryWorld brand
+- The Caterpillars hybrid cover should read soft, literary, storybook, and educational
+- Percy should read premium, focused, and cinematic
+- The Spanish edition should read bright, friendly, and clearly part of the same children’s brand ecosystem
+- Keep the site polished and consistent, but let each cover keep its own identity
+
+LAYOUT REQUIREMENTS
+For any shared grid or row of book covers:
+- make all cover containers the same size
+- vertically align titles, buttons, and captions
+- keep image padding consistent
+- ensure mobile responsiveness
+- prevent text overlap on smaller screens
+- use lazy loading where appropriate
+
+ACCESSIBILITY
+Add or update alt text exactly as follows:
+- alt="The Brief but Spectacular Lives of Caterpillars, 6-8 Read-Aloud Hybrid cover by Marq Overton"
+- alt="Percy’s First New Year’s Resolution cover by Marq Overton"
+- alt="Las breves pero espectaculares vidas de las orugas, Spanish edition cover by Marq Overton"
+
+CONTENT LABELS
+Where these titles are listed, confirm the display names are clean and consistent:
+
+- The Brief but Spectacular Lives of Caterpillars
+  Sub-label: 6–8 Read-Aloud Hybrid
+
+- Percy’s First New Year’s Resolution
+
+- Las breves pero espectaculares vidas de las orugas
+  Sub-label: Spanish Edition
+
+IF THERE IS A BOOK DATA FILE
+If the site uses a data file such as:
+- books.ts
+- books.js
+- catalog.json
+- content collections
+- CMS entries
+
+Update the image path, title, subtitle, and alt text there first, then verify all connected components render correctly.
+
+IF IMAGES MUST BE MOVED INTO THE PROJECT
+Place them in the proper public assets folder, for example:
+- /public/images/books/
+
+Then rename cleanly if needed:
+- brief-hybrid-cover.jpg
+- percy-first-new-years-resolution-cover.png
+- brief-spanish-cover.png
+
+Update all references accordingly.
+
+QUALITY CHECK
+After updating:
+1. verify desktop layout
+2. verify tablet layout
+3. verify mobile layout
+4. confirm no old cover images remain
+5. confirm all three covers load correctly
+6. confirm image clarity is sharp
+7. confirm buttons, captions, and spacing still feel premium
+
+Then give me:
+- the files you changed
+- the exact image paths now in use
+- a short note on anything else you adjusted to keep the book section visually consistent
