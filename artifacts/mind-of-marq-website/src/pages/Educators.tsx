@@ -126,7 +126,7 @@ export default function Educators() {
               Stories That Open the World
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed text-lg">
-              Two read-aloud titles built for ages 6–8. Each one invites curiosity, sparks conversation, and supports real learning without feeling like a lesson.
+              Read-aloud titles built for ages 6–8, including a Spanish edition. Each one invites curiosity, sparks conversation, and supports real learning without feeling like a lesson.
             </p>
           </motion.div>
 
@@ -142,7 +142,7 @@ export default function Educators() {
               <div className="relative max-w-[300px] w-full">
                 <div className="absolute -inset-3 rounded-3xl bg-primary/8 -z-10" />
                 <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "0 20px 50px -10px rgba(25,122,110,0.22), 0 8px 24px -4px rgba(0,0,0,0.12)" }}>
-                  <img src="/images/book-percy.png" alt="Percy's First Resolution book cover" className="w-full h-auto object-cover block" />
+                  <img src="/images/books/percy-cover.png" alt="Percy's First New Year's Resolution cover by Marq Overton" loading="lazy" className="w-full h-auto object-cover object-right block" style={{ aspectRatio: "3/4" }} />
                 </div>
               </div>
             </motion.div>
@@ -218,7 +218,7 @@ export default function Educators() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 mb-7">
-                {["Part 1 + Part 2", "Coloring Book Available", "Series Format"].map((b) => (
+                {["Part 1 + Part 2", "Read-Aloud Hybrid", "Series Format"].map((b) => (
                   <span key={b} className="bg-primary/10 text-primary text-xs font-semibold px-3 py-1.5 rounded-full">{b}</span>
                 ))}
               </div>
@@ -237,7 +237,7 @@ export default function Educators() {
               <div className="relative max-w-[300px] w-full">
                 <div className="absolute -inset-3 rounded-3xl bg-primary/8 -z-10" />
                 <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "0 20px 50px -10px rgba(25,122,110,0.22), 0 8px 24px -4px rgba(0,0,0,0.12)" }}>
-                  <img src="/images/book-caterpillar.png" alt="The Brief but Spectacular Lives of Caterpillars book cover" className="w-full h-auto object-cover block" />
+                  <img src="/images/books/brief-hybrid-cover.png" alt="The Brief but Spectacular Lives of Caterpillars, 6-8 Read-Aloud Hybrid cover by Marq Overton" loading="lazy" className="w-full h-auto object-contain block" />
                 </div>
               </div>
             </motion.div>
