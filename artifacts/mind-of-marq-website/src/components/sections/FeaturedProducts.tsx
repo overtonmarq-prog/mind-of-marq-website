@@ -29,8 +29,8 @@ export function FeaturedProducts() {
             {/* Cover — full-width at top; aspect-[3/2] matches the actual spread ratio */}
             <div className="w-full bg-[hsl(220,40%,9%)] flex items-center justify-center p-4 sm:p-6">
               <img
-                src={`${baseUrl}images/books/percy-first-new-years-resolution-cover.png`}
-                alt="Percy's First New Year's Resolution cover by Marq Overton"
+                src={`${baseUrl}images/books/percy-first-resolution-approved.webp`}
+                alt="Percy's First Resolution cover by Marq Overton"
                 loading="lazy"
                 className="w-full rounded-xl object-contain"
                 style={{ maxHeight: "340px", objectFit: "contain" }}
@@ -43,10 +43,10 @@ export function FeaturedProducts() {
                   Ages 6–8 · Featured
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white mb-3 leading-tight">
-                  Percy's First New Year's Resolution
+                  Percy's First Resolution
                 </h3>
                 <p className="text-white/60 text-sm leading-relaxed mb-5">
-                  A warm, cinematic story about a young penguin navigating a big promise — and what it really means to follow through. Perfect for classroom read-alouds and SEL discussions around goals and perseverance.
+                  Percy the penguin makes a bold New Year's resolution. He wants to fly. With help from his friends, Percy discovers the importance of setting goals, perseverance, and believing in himself.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {["SEL · Goals", "STEM Connections", "Classroom Ready"].map((tag) => (
