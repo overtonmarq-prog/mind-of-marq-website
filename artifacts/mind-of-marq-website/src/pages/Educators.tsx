@@ -143,8 +143,8 @@ export default function Educators() {
                 <div className="absolute -inset-3 rounded-3xl bg-primary/8 -z-10" />
                 <div className="rounded-2xl overflow-hidden" style={{ boxShadow: "0 20px 50px -10px rgba(25,122,110,0.22), 0 8px 24px -4px rgba(0,0,0,0.12)" }}>
                   <img
-                    src="/images/books/percy-first-new-years-resolution-cover.png"
-                    alt="Percy's First New Year's Resolution cover by Marq Overton"
+                    src="/images/books/percy-first-resolution-approved.webp"
+                    alt="Percy's First Resolution cover by Marq Overton"
                     loading="lazy"
                     className="w-full h-auto block"
                   />
@@ -159,9 +159,9 @@ export default function Educators() {
               transition={{ duration: 0.65 }}
             >
               <span className="text-xs font-bold text-primary/60 uppercase tracking-widest mb-3 block">Ages 6–8 · Read-Aloud</span>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4 leading-snug">Percy's First New Year's Resolution</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4 leading-snug">Percy's First Resolution</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Percy wants to do something important this year — but figuring out what that means turns into the most surprising lesson of all. A warm, funny, and quietly thoughtful story about setting goals, staying curious, and what it really means to follow through.
+                Percy the penguin makes a bold New Year's resolution. He wants to fly. With help from his friends, Percy discovers the importance of setting goals, perseverance, and believing in himself.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-7">
                 <div className="bg-secondary/40 rounded-xl p-4 border border-border/50">
@@ -484,7 +484,7 @@ export default function Educators() {
                 <h3 className="text-xl font-serif font-bold text-foreground mb-5">What you can request</h3>
                 <ul className="space-y-3">
                   {[
-                    "Preview materials for Percy's First New Year's Resolution",
+                    "Preview materials for Percy's First Resolution",
                     "Preview materials for The Brief but Spectacular Lives of Caterpillars",
                     "Starter, Classroom, or Grade Pack",
                     "Spanish version information",
