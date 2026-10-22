@@ -1,0 +1,9 @@
+[build]
+  base = "."
+  command = "pnpm --filter @workspace/mind-of-marq-website run build"
+  publish = "artifacts/mind-of-marq-website/dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
