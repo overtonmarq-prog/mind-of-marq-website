@@ -3,13 +3,14 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Storyworld System", href: "#system" },
-  { name: "Books", href: "#books" },
-  { name: "Stage Plays", href: "#stage" },
-  { name: "For Schools", href: "/educators" },
+  { name: "Home", href: "/#home" },
+  { name: "Storyworld System", href: "/#system" },
+  { name: "Books", href: "/#books" },
+  { name: "Shop Books", href: "/shop" },
+  { name: "Stage Plays", href: "/#stage" },
+  { name: "Schools & Libraries", href: "/educators" },
   { name: "Partner With Us", href: "/partners" },
-  { name: "About", href: "#about" },
+  { name: "About", href: "/#about" },
 ];
 
 export function NavBar() {
@@ -33,7 +34,7 @@ export function NavBar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <a
-            href="#home"
+            href="/#home"
             className="font-serif text-xl font-bold tracking-tight text-primary z-50 relative"
             onClick={closeMenu}
           >
@@ -47,7 +48,7 @@ export function NavBar() {
                 key={link.name}
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
-                  link.name === "Partner With Us"
+                  link.name === "Partner With Us" || link.name === "Shop Books"
                     ? "text-primary hover:text-primary/80"
                     : "text-foreground/75 hover:text-primary"
                 }`}
@@ -56,7 +57,7 @@ export function NavBar() {
               </a>
             ))}
             <Button asChild className="ml-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 text-sm">
-              <a href="#contact">Contact</a>
+              <a href="/#contact">Contact</a>
             </Button>
           </nav>
 
@@ -77,7 +78,7 @@ export function NavBar() {
           mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col items-center gap-7 text-center">
+        <nav className="flex flex-col items-center gap-6 text-center">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -93,7 +94,7 @@ export function NavBar() {
             </a>
           ))}
           <Button asChild size="lg" className="mt-2 bg-primary hover:bg-primary/90 rounded-full px-8 text-lg">
-            <a href="#contact" onClick={closeMenu}>Contact</a>
+            <a href="/#contact" onClick={closeMenu}>Contact</a>
           </Button>
         </nav>
       </div>

@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { catalog, coverSrc } from "@/data/catalog";
+
+const featured = catalog.find((b) => b.id === "caterpillars-read-aloud-coloring-adventure")!;
+const percyColorLearn = catalog.find((b) => b.id === "percy-and-friends-color-and-learn")!;
 
 export function FeaturedProducts() {
   const baseUrl = import.meta.env.BASE_URL;
@@ -7,49 +11,61 @@ export function FeaturedProducts() {
   return (
     <section id="books" className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-14">
-          <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
-            The Books
-          </p>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-            Stories built to stay with children
-          </h2>
+        <div className="mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+          <div>
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+              Featured Titles
+            </p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
+              Stories built to stay with children
+            </h2>
+          </div>
+          <a
+            href="/shop"
+            className="inline-flex items-center gap-2 self-start sm:self-auto bg-primary hover:bg-primary/90 text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-colors"
+          >
+            Shop Books <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
-          {/* ── FEATURED: Percy ──────────────────────────────────────────── */}
+          {/* ── FEATURED: Caterpillars ───────────────────────────────────── */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="lg:col-span-7 rounded-3xl overflow-hidden bg-[hsl(220,40%,12%)] border border-border/30 flex flex-col"
+            className="lg:col-span-7 rounded-3xl overflow-hidden bg-[hsl(150,30%,12%)] border border-border/30 flex flex-col"
           >
-            {/* Cover — full-width at top; aspect-[3/2] matches the actual spread ratio */}
-            <div className="w-full bg-[hsl(220,40%,9%)] flex items-center justify-center p-4 sm:p-6">
+            <a
+              href={`/shop#${featured.id}`}
+              className="w-full bg-[hsl(150,30%,9%)] flex items-center justify-center p-4 sm:p-6"
+              aria-label={`${featured.title}: ${featured.edition} in the shop`}
+            >
               <img
-                src={`${baseUrl}images/books/percy-first-new-years-resolution-cover.png`}
-                alt="Percy's First New Year's Resolution cover by Marq Overton"
+                src={coverSrc(featured.cover, 640)}
+                alt={featured.coverAlt}
                 loading="lazy"
-                className="w-full rounded-xl object-contain"
-                style={{ maxHeight: "340px", objectFit: "contain" }}
+                className="w-auto max-w-full rounded-xl object-contain shadow-lg"
+                style={{ maxHeight: "380px" }}
               />
-            </div>
+            </a>
 
             <div className="p-8 flex flex-col justify-between flex-1">
               <div>
                 <span className="inline-block text-xs font-bold uppercase tracking-wider bg-white/15 text-white px-3 py-1 rounded-full mb-4">
-                  Ages 6–8 · Featured
+                  {featured.ages} · Featured
                 </span>
-                <h3 className="font-serif text-2xl font-bold text-white mb-3 leading-tight">
-                  Percy's First New Year's Resolution
+                <h3 className="font-serif text-2xl font-bold text-white mb-1 leading-tight">
+                  {featured.title}
                 </h3>
+                <p className="text-white/70 text-sm font-semibold mb-3">{featured.edition}</p>
                 <p className="text-white/60 text-sm leading-relaxed mb-5">
-                  A warm, cinematic story about a young penguin navigating a big promise — and what it really means to follow through. Perfect for classroom read-alouds and SEL discussions around goals and perseverance.
+                  Transformation, courage, and the science of becoming. A read-aloud story with pages to color, made for STEM + SEL in science and life skills classrooms.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {["SEL · Goals", "STEM Connections", "Classroom Ready"].map((tag) => (
+                  {["STEM · Life Cycles", "SEL · Courage", "Classroom Ready"].map((tag) => (
                     <span key={tag} className="text-xs bg-white/10 border border-white/15 px-3 py-1 rounded-full text-white/70">
                       {tag}
                     </span>
@@ -57,10 +73,10 @@ export function FeaturedProducts() {
                 </div>
               </div>
               <a
-                href="#contact"
+                href={`/shop#${featured.id}`}
                 className="inline-flex items-center gap-2 text-white/90 font-semibold text-sm hover:text-white group"
               >
-                Request sample materials
+                View in the shop
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -69,34 +85,38 @@ export function FeaturedProducts() {
           {/* ── SECONDARY COLUMN ─────────────────────────────────────────── */}
           <div className="lg:col-span-5 flex flex-col gap-5">
 
-            {/* Caterpillar Hybrid */}
+            {/* Percy's First New Year's Resolution */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: 0.1 }}
-              className="rounded-3xl overflow-hidden border border-border/50 bg-[hsl(177,20%,96%)] flex gap-5 p-5 items-center"
+              className="rounded-3xl overflow-hidden border border-border/50 bg-[hsl(220,30%,96%)] flex gap-5 p-5 items-center"
             >
-              <div className="flex-shrink-0 w-20 h-28 rounded-xl overflow-hidden bg-white border border-border/30 shadow-sm">
+              <div className="flex-shrink-0 w-20 h-[120px] rounded-xl overflow-hidden bg-white border border-border/30 shadow-sm">
                 <img
-                  src={`${baseUrl}images/books/brief-hybrid-cover.png`}
-                  alt="The Brief but Spectacular Lives of Caterpillars, 6-8 Read-Aloud Hybrid cover by Marq Overton"
+                  src={coverSrc("images/books/percy-first-resolution-cover.png", 240)}
+                  alt="Percy's First New Year's Resolution cover by Marq Overton: Percy in goggles and a blue scarf on a snowy cliff"
                   loading="lazy"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="flex-1 min-w-0">
                 <span className="text-xs font-bold uppercase tracking-wider text-primary">Ages 6–8</span>
-                <h3 className="font-serif text-base font-bold text-foreground mt-1 mb-0.5 leading-snug">
-                  The Brief but Spectacular Lives of Caterpillars
+                <h3 className="font-serif text-base font-bold text-foreground mt-1 mb-2 leading-snug">
+                  Percy's First New Year's Resolution
                 </h3>
-                <p className="text-primary/70 text-xs font-semibold mb-2">6–8 Read-Aloud Hybrid</p>
                 <p className="text-muted-foreground text-xs leading-relaxed mb-3">
-                  Transformation, courage, and the science of becoming. STEM + SEL for science and life skills classrooms.
+                  A young penguin navigates a big promise and what it means to follow through. SEL around goals and perseverance.
                 </p>
-                <a href="#contact" className="inline-flex items-center gap-1.5 text-primary font-semibold text-xs hover:underline">
-                  Learn more <ArrowRight className="w-3 h-3" />
-                </a>
+                <div className="flex flex-wrap gap-x-4 gap-y-1">
+                  <a href="#contact" className="inline-flex items-center gap-1.5 text-primary font-semibold text-xs hover:underline">
+                    Request sample materials <ArrowRight className="w-3 h-3" />
+                  </a>
+                  <a href={`/shop#${percyColorLearn.id}`} className="inline-flex items-center gap-1.5 text-primary font-semibold text-xs hover:underline">
+                    Percy Color &amp; Learn <ArrowRight className="w-3 h-3" />
+                  </a>
+                </div>
               </div>
             </motion.div>
 

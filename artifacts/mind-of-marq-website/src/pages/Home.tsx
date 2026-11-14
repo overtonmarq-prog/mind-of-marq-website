@@ -10,8 +10,10 @@ import { MissionBlock } from "@/components/sections/MissionBlock";
 import { PartnerCallout } from "@/components/sections/PartnerCallout";
 import { FooterCTA } from "@/components/sections/FooterCTA";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { useHashScroll } from "@/hooks/use-hash-scroll";
 
 export default function Home() {
+  useHashScroll();
   return (
     <div className="min-h-screen bg-background">
       <NavBar />

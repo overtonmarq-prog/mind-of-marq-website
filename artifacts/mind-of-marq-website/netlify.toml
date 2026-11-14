@@ -1,7 +1,12 @@
+# Build only the website package from the pnpm workspace (commands run from the repo root).
 [build]
-  command = "npm run build"
-  publish = "dist"
+  command = "npx -y pnpm@10.26.1 install --frozen-lockfile && npx -y pnpm@10.26.1 --filter @workspace/mind-of-marq-website run build"
+  publish = "artifacts/mind-of-marq-website/dist"
 
+[build.environment]
+  NODE_VERSION = "22"
+
+# SPA routes such as /shop and /educators
 [[redirects]]
   from = "/*"
   to = "/index.html"

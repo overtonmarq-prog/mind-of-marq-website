@@ -15,19 +15,21 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4 text-background">Explore</h3>
             <ul className="space-y-2.5 text-background/70 text-sm">
-              <li><a href="#home" className="hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#system" className="hover:text-primary transition-colors">Storyworld System</a></li>
-              <li><a href="#books" className="hover:text-primary transition-colors">Books</a></li>
-              <li><a href="#stage" className="hover:text-primary transition-colors">Stage Plays</a></li>
-              <li><a href="#about" className="hover:text-primary transition-colors">About</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/#home" className="hover:text-primary transition-colors">Home</a></li>
+              <li><a href="/#system" className="hover:text-primary transition-colors">Storyworld System</a></li>
+              <li><a href="/#books" className="hover:text-primary transition-colors">Books</a></li>
+              <li><a href="/shop" className="hover:text-primary transition-colors">Shop Books</a></li>
+              <li><a href="/#stage" className="hover:text-primary transition-colors">Stage Plays</a></li>
+              <li><a href="/#about" className="hover:text-primary transition-colors">About</a></li>
+              <li><a href="/#contact" className="hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-bold mb-4 text-background">Programs</h3>
             <ul className="space-y-2.5 text-background/70 text-sm">
-              <li><a href="/educators" className="hover:text-primary transition-colors">For Schools</a></li>
+              <li><a href="/educators" className="hover:text-primary transition-colors">Schools &amp; Libraries</a></li>
+              <li><a href="/educators#bulk-orders" className="hover:text-primary transition-colors">Bulk Orders &amp; Classroom Licenses</a></li>
               <li>
                 <a href="/partners" className="hover:text-primary transition-colors inline-flex items-center gap-1.5">
                   Partner With Us
@@ -43,7 +45,7 @@ export function Footer() {
         <div className="pt-8 border-t border-background/15 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/40">
           <p>&copy; {currentYear} M.O.M. Kids StoryWorld. All rights reserved.</p>
           <div className="flex gap-5">
-            <a href="/educators" className="hover:text-primary/70 transition-colors">For Schools</a>
+            <a href="/educators" className="hover:text-primary/70 transition-colors">Schools &amp; Libraries</a>
             <span>·</span>
             <a href="/partners" className="hover:text-primary/70 transition-colors">Partner With Us</a>
           </div>
