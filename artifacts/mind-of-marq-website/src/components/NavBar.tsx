@@ -3,13 +3,14 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Storyworld System", href: "#system" },
-  { name: "Books", href: "#books" },
-  { name: "Stage Plays", href: "#stage" },
-  { name: "For Schools", href: "/educators" },
-  { name: "Partner With Us", href: "/partners" },
-  { name: "About", href: "#about" },
+  { name: "Home", href: "/#home" },
+  { name: "Publishing", href: "/#publishing" },
+  { name: "Storyworld", href: "/#storyworld" },
+  { name: "Books", href: "/#books" },
+  { name: "Educators", href: "/#educators" },
+  { name: "Libraries", href: "/#libraries" },
+  { name: "Partnerships", href: "/#partnerships" },
+  { name: "About", href: "/#about" },
 ];
 
 export function NavBar() {
@@ -17,7 +18,9 @@ export function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -33,30 +36,26 @@ export function NavBar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <a
-            href="#home"
-            className="font-serif text-xl font-bold tracking-tight text-primary z-50 relative"
+            href="/#home"
+            className="font-serif text-2xl font-bold tracking-tight text-primary z-50 relative"
             onClick={closeMenu}
           >
-            M.O.M. <span className="text-foreground font-normal">Kids</span>
+            M.O.M.
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-5">
+          <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  link.name === "Partner With Us"
-                    ? "text-primary hover:text-primary/80"
-                    : "text-foreground/75 hover:text-primary"
-                }`}
+                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <Button asChild className="ml-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 text-sm">
-              <a href="#contact">Contact</a>
+            <Button asChild className="ml-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6">
+              <a href="/#contact">Contact Us</a>
             </Button>
           </nav>
 
@@ -73,27 +72,23 @@ export function NavBar() {
 
       {/* Mobile Nav Overlay */}
       <div
-        className={`fixed inset-0 bg-background/97 backdrop-blur-lg z-40 flex flex-col items-center justify-center transition-all duration-300 lg:hidden ${
+        className={`fixed inset-0 bg-background/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center transition-all duration-300 lg:hidden ${
           mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col items-center gap-7 text-center">
+        <nav className="flex flex-col items-center gap-6 text-center">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={closeMenu}
-              className={`text-2xl font-serif transition-colors ${
-                link.name === "Partner With Us"
-                  ? "text-primary"
-                  : "text-foreground hover:text-primary"
-              }`}
+              className="text-2xl font-serif text-foreground hover:text-primary transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <Button asChild size="lg" className="mt-2 bg-primary hover:bg-primary/90 rounded-full px-8 text-lg">
-            <a href="#contact" onClick={closeMenu}>Contact</a>
+          <Button asChild size="lg" className="mt-4 bg-primary hover:bg-primary/90 rounded-full px-8 text-lg">
+            <a href="/#contact" onClick={closeMenu}>Contact Us</a>
           </Button>
         </nav>
       </div>
