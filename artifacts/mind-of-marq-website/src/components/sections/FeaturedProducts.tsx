@@ -13,6 +13,7 @@ export function FeaturedProducts() {
   const supportingBooks = [
     {
       title: "Percy's First Resolution",
+      subtitle: undefined as string | undefined,
       ageLabel: "Ages 6–8",
       cover: "images/books/percy-first-resolution-approved.webp",
       alt: "Percy's First Resolution cover by Marq Overton",
@@ -23,6 +24,7 @@ export function FeaturedProducts() {
     },
     {
       title: "Confessions of a Teenaged Martial Artist",
+      subtitle: "The Training I Never Expected",
       ageLabel: "Grades 6–10",
       cover: "images/book-martial-arts.png",
       alt: "Confessions of a Teenaged Martial Artist cover by Marq Overton",
@@ -110,9 +112,14 @@ export function FeaturedProducts() {
             </div>
             <div className="flex-1 flex flex-col">
               <span className="text-xs font-bold uppercase tracking-wider text-primary">{book.ageLabel}</span>
-              <h3 className="font-serif text-2xl font-bold text-foreground mt-1 mb-3 leading-snug">
+              <h3
+                className={`font-serif text-2xl font-bold text-foreground mt-1 leading-snug ${book.subtitle ? "mb-1" : "mb-3"}`}
+              >
                 {book.title}
               </h3>
+              {book.subtitle && (
+                <p className="font-serif italic text-lg text-primary mb-3">{book.subtitle}</p>
+              )}
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">{book.description}</p>
               <div className="flex flex-wrap gap-2 mb-5">
                 {book.tags.map((tag) => (
