@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useHashScroll } from "@/hooks/use-hash-scroll";
 import { motion } from "framer-motion";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
+import { BulkOrders } from "@/components/sections/BulkOrders";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -48,9 +50,15 @@ export default function Educators() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "educator-request", ...formState }),
     })
-      .then(() => setSubmitted(true))
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        setError(false);
+        setSubmitted(true);
+      })
       .catch(() => setError(true));
   };
+
+  useHashScroll();
 
   return (
     <div className="min-h-screen bg-background font-sans">
@@ -362,7 +370,7 @@ export default function Educators() {
           <motion.div {...fadeUp} className="text-center mb-14">
             <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Classroom Packs</span>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-5 leading-tight">
-              Simple pricing. Fast approval.
+              Flexible packs, quoted for you.
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed text-lg">
               Start small, test the books with students, then expand by classroom, grade, or title.
@@ -374,20 +382,17 @@ export default function Educators() {
               {
                 tag: "Starter Pack",
                 qty: "15 Books",
-                price: "$149",
                 features: ["Low-friction entry point", "Bonus coloring pages included", "Ideal for one classroom or pilot group", "Fastest approval option"],
               },
               {
                 tag: "Classroom Pack",
                 qty: "25 Books",
-                price: "$249",
                 features: ["Strong classroom set option", "Bonus student materials included", "Spanish version available upon request", "Best fit for full-class use"],
                 featured: true,
               },
               {
                 tag: "Grade Pack",
                 qty: "50 Books",
-                price: "$449",
                 features: ["For larger rollout or grade use", "Priority author session scheduling", "Better value per copy", "Useful for events and literacy programs"],
               },
             ].map((pack, i) => (
@@ -405,7 +410,7 @@ export default function Educators() {
                 )}
                 <span className="text-xs font-bold text-primary/60 uppercase tracking-widest mb-2">{pack.tag}</span>
                 <h3 className="text-2xl font-serif font-bold text-foreground mb-1">{pack.qty}</h3>
-                <p className="text-5xl font-serif font-bold text-primary mb-6 leading-none">{pack.price}</p>
+                <p className="text-sm font-semibold text-primary mb-6">Quote on request</p>
                 <ul className="space-y-3 mb-8 flex-1">
                   {pack.features.map((f) => (
                     <li key={f} className="flex gap-2 text-sm text-foreground/75 leading-snug">
@@ -415,7 +420,7 @@ export default function Educators() {
                   ))}
                 </ul>
                 <a
-                  href="#request"
+                  href="#bulk-orders"
                   className={`flex items-center justify-center w-full font-semibold py-3.5 rounded-full transition-colors ${pack.featured ? "bg-primary hover:bg-primary/90 text-white shadow-md" : "border border-primary text-primary hover:bg-primary/5"}`}
                 >
                   Request This Pack
@@ -425,10 +430,12 @@ export default function Educators() {
           </div>
 
           <motion.p {...fadeUp} className="text-center text-sm text-muted-foreground">
-            All packs include bonus materials. Spanish editions available upon request. Contact us for bulk or district pricing.
+            All packs include bonus materials. Spanish editions available upon request. Request a bulk quote for pack or district pricing.
           </motion.p>
         </div>
       </section>
+
+      <BulkOrders />
 
       {/* ── STORYWORLD PATH ────────────────────────────────────────────────── */}
       <section className="py-24 bg-foreground text-background">
@@ -558,9 +565,9 @@ export default function Educators() {
                       className="w-full border border-input bg-background px-4 py-3 text-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/30"
                     >
                       <option>Sample materials</option>
-                      <option>15-book Starter Pack — $149</option>
-                      <option>25-book Classroom Pack — $249</option>
-                      <option>50-book Grade Pack — $449</option>
+                      <option>15-book Starter Pack</option>
+                      <option>25-book Classroom Pack</option>
+                      <option>50-book Grade Pack</option>
                       <option>Spanish version</option>
                       <option>Author visit or read-aloud</option>
                       <option>Library programming</option>
